@@ -1,0 +1,23 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+public class EnergySystem : MonoBehaviour
+{
+    public Slider energySlider;
+    public float maxEnergy = 100f;
+    private float currentEnergy;
+
+    public void UseEnergy(float energyCost)
+    {
+        currentEnergy -= energyCost;
+        Debug.Log($"Used {energyCost} to beaver for total of {currentEnergy}");
+
+    }
+
+    public void AddEnergy(float energyAmount)
+    {
+        currentEnergy = Mathf.Min(currentEnergy + energyAmount, maxEnergy);
+        Debug.Log($"Added {energyAmount} to beaver for total of {currentEnergy}");
+    }
+
+    }

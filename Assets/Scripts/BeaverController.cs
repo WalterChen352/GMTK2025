@@ -64,7 +64,6 @@ public class BeaverController : MonoBehaviour
         if (moveInput != Vector2.zero) //it moved
         {
             energySystem.UseEnergy(.25f);
-            foodCounter.AddFood(1);
         }
     }
 
@@ -94,8 +93,8 @@ public class BeaverController : MonoBehaviour
         float horizontalInput = moveInput.x;
         float verticalInput = moveInput.y;
         move = new Vector3(horizontalInput, 0, verticalInput);
-        Vector3 camForward = cam.forward;
-        Vector3 camRight = cam.right;
+        Vector3 camForward = transform.forward;
+        Vector3 camRight = transform.right;
         camForward.y = 0;
         camRight.y = 0;
         Vector3 forwardRelative = camForward * verticalInput;

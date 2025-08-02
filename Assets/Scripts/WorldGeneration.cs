@@ -26,7 +26,7 @@ public class WorldGeneration: MonoBehaviour
         {
             Vector3 spawnPos = new Vector3(
                 Random.Range(StartingPoint.x, StartingPoint.x + SpawnArea.x),
-                0,
+                10,
                 Random.Range(StartingPoint.y, StartingPoint.y + SpawnArea.y)
                 );
 

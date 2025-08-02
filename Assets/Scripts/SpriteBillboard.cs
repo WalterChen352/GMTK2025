@@ -12,7 +12,7 @@ public class SpriteBillboard : MonoBehaviour
     void LateUpdate()
     {
         Vector3 CamForward = cam.forward;
-        CamForward.y = 0;
+        //CamForward.y = 0;
         transform.forward = CamForward;
         // cam.y = 0;
         // transform.LookAt(cam);

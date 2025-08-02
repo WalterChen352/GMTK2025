@@ -3,16 +3,17 @@ using UnityEngine;
 public class SpriteBillboard : MonoBehaviour
 {
     [SerializeField] Transform cam;
-    [SerialzeField] Sprite sprite;
+    [SerializeField] Sprite sprite;
     public Vector3 CamFoward;
     void Start()
     {
-        CamFoward = cam.foward;
+        
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // void LateUpdate()
+    // {
+    //     sprite.Transform.LookAt(cam);
+    //     sprite.Transform.Rotate(0, 180, 0);
+    // }
 }

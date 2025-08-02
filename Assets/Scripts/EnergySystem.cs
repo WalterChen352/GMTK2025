@@ -6,7 +6,12 @@ public class EnergySystem : MonoBehaviour
     public Slider energySlider;
     public float maxEnergy = 100f;
     private float currentEnergy;
-
+    private void Start()
+    {
+        currentEnergy = maxEnergy;
+        energySlider.maxValue = maxEnergy;
+        energySlider.value = currentEnergy;
+    }
     public void UseEnergy(float energyCost)
     {
         currentEnergy -= energyCost;

@@ -16,7 +16,7 @@ public class EnergySystem : MonoBehaviour
     public void UseEnergy(float energyCost)
     {
         currentEnergy -= energyCost;
-        Debug.Log($"Used {energyCost} to beaver for total of {currentEnergy}");
+        // Debug.Log($"Used {energyCost} to beaver for total of {currentEnergy}");
         energySlider.value = currentEnergy;
 
     }

@@ -15,7 +15,7 @@ public class DamEntrance : MonoBehaviour, IInteractable
     {
         if (on && IsInteractable)
         {
-            outline.enabled = true;
+                outline.enabled = true;
         } else {
             outline.enabled = false;
         }

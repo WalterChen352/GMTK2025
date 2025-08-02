@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class SpriteBillboard : MonoBehaviour
 {
-    [SerializeField] Transform cam;
+    Transform cam;
 
     void Start()
     {
+    }
+
+    private void Awake()
+    {
+        cam = Camera.main.transform;
     }
 
     // Update is called once per frame

@@ -6,6 +6,7 @@ public class BushState : MonoBehaviour, IInteractable
     public int BerryCount;
     public GameObject beaver;
     public Outline outline;
+    public bool IsInteractable { get; set; }
     public void Start()
     {
         beaver = GameObject.Find("Beaver");
@@ -16,7 +17,7 @@ public class BushState : MonoBehaviour, IInteractable
 
     public void Highlight(bool on)
     {
-        if (on)
+        if (on && IsInteractable)
         {
             outline.enabled = true;
         } else {
@@ -37,6 +38,7 @@ public class BushState : MonoBehaviour, IInteractable
     }
     private void CollectBerries()
     {
+        IsInteractable = false;
         foodCounter.AddFood(BerryCount);
     }
     public void Initialize(int berryCount)

@@ -6,13 +6,16 @@ public class TreeState : MonoBehaviour, IInteractable
     public WoodCounter woodCounter;
     public GameObject beaver;
     public bool FallenDown;
+    public Outline outline;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         beaver = GameObject.Find("Beaver");
         woodCounter = beaver.GetComponent<WoodCounter>();
+        outline = GetComponent<Outline>();
         Hitpoints = 4;
         FallenDown = false;
+        outline.enabled = false;
     }
 
     public void Interact()
@@ -24,7 +27,15 @@ public class TreeState : MonoBehaviour, IInteractable
         }
         
     }
-
+    public void Highlight(bool on)
+    {
+        if (on)
+        {
+            outline.enabled = true;
+        } else {
+            outline.enabled = false;
+        }
+    }
     public void ChopTree()
     {
         if (Hitpoints > 0)

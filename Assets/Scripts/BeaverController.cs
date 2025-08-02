@@ -72,7 +72,7 @@ public class BeaverController : MonoBehaviour
         Debug.Log("Entering collision");
         if (other.TryGetComponent<IInteractable>(out var interactable))
         {
-
+            interactable.Highlight(true);
             nearbyInteractables.Add(interactable);
             Debug.Log($"Adding interactable. Interactables count is now {nearbyInteractables.Count}");
         }
@@ -83,7 +83,7 @@ public class BeaverController : MonoBehaviour
         Debug.Log("Leaving collision");
         if (other.TryGetComponent<IInteractable>(out var interactable))
         {
-
+            interactable.Highlight(false);
             nearbyInteractables.Remove(interactable);
             Debug.Log($"Removing interactable. Interactables count is now {nearbyInteractables.Count}");
         }

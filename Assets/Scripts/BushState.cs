@@ -5,16 +5,24 @@ public class BushState : MonoBehaviour, IInteractable
     public FoodCounter foodCounter;
     public int BerryCount;
     public GameObject beaver;
+    public Outline outline;
     public void Start()
     {
         beaver = GameObject.Find("Beaver");
         foodCounter = beaver.GetComponent<FoodCounter>();
-        if (foodCounter == null)
-        {
-            Debug.Log("NOOOO");
-        }
+        outline = GetComponent<Outline>();
+        outline.enabled = false;
     }
 
+    public void Highlight(bool on)
+    {
+        if (on)
+        {
+            outline.enabled = true;
+        } else {
+            outline.enabled = false;
+        }
+    }
     public void Interact()
     {
         Debug.Log("Bush interacted with!");

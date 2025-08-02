@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
 public class BeaverController : MonoBehaviour
@@ -19,11 +20,16 @@ public class BeaverController : MonoBehaviour
     [SerializeField] Sprite awayRightSprite;
     [SerializeField] Sprite awaySprite;
 
+    [SerializeField] AudioClip walkingAudio;
+
     private Vector3 move;
+    private bool isMoving = false;
     private readonly List<IInteractable> nearbyInteractables = new();
     private Vector2 moveInput;
     private Rigidbody rb;
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
+    private AudioSource audioSource;
     private EnergySystem energySystem;
     private WoodCounter woodCounter;
     private FoodCounter foodCounter;
@@ -32,6 +38,8 @@ public class BeaverController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponentInChildren<Animator>();
+        audioSource = GetComponent<AudioSource>();
         energySystem = GetComponent<EnergySystem>();
         woodCounter = GetComponent<WoodCounter>();
         foodCounter = GetComponent<FoodCounter>();
@@ -51,8 +59,21 @@ public class BeaverController : MonoBehaviour
             //Debug.Log(context.ReadValue<Vector2>());
         }
         moveInput = context.ReadValue<Vector2>();
-        if (moveInput != Vector2.zero)
+        if (moveInput == Vector2.zero)
         {
+            animator.SetBool("IsMoving", false);
+            audioSource.Stop();
+            isMoving = false;
+        }
+        else
+        {
+            if (!isMoving)
+            {
+                animator.SetBool("IsMoving", true);
+                audioSource.clip = walkingAudio;
+                audioSource.Play();
+                isMoving = true;
+            }
             float angle = Mathf.Atan2(moveInput.y, moveInput.x) * Mathf.Rad2Deg;
             if (-157.5 <= angle && angle < -112.5)
             {

@@ -11,9 +11,9 @@ public class SpriteBillboard : MonoBehaviour
     }
 
     // Update is called once per frame
-    // void LateUpdate()
-    // {
-    //     sprite.Transform.LookAt(cam);
-    //     sprite.Transform.Rotate(0, 180, 0);
-    // }
+    void LateUpdate()
+    {
+        sprite.Transform.LookAt(cam);
+        sprite.Transform.Rotate(0, 180, 0);
+    }
 }

@@ -7,6 +7,9 @@ public class BeaverController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private StandardInputs input;
     [SerializeField] private SphereCollider interactionZone;
+
+    [SerializeField] Transform cam;
+    private Vector3 move;
     private readonly List<IInteractable> nearbyInteractables = new();
     private Vector2 moveInput;
     private Rigidbody rb;
@@ -20,6 +23,10 @@ public class BeaverController : MonoBehaviour
         energySystem = GetComponent<EnergySystem>();
         woodCounter = GetComponent<WoodCounter>();
         foodCounter = GetComponent<FoodCounter>();
+
+    }
+    public void Start()
+    {
 
     }
 
@@ -39,18 +46,21 @@ public class BeaverController : MonoBehaviour
         if (context.started)
         {
             Debug.Log("Beaver interacting!");
-            if(nearbyInteractables.Count > 0)
+            if (nearbyInteractables.Count > 0)
             {
                 nearbyInteractables[0].Interact();
             }
         }
     }
 
-    public void FixedUpdate()
+    public void Update()
     {
 
-        Vector3 move = new Vector3(moveInput.x, 0, moveInput.y);
-        rb.linearVelocity = move * speed;
+    }
+    public void FixedUpdate()
+    {
+        Vector3 moveDir = calcDirRelToCam(cam, moveInput);
+        rb.linearVelocity = new Vector3(moveDir.x, 0, moveDir.z) * speed;
         if (moveInput != Vector2.zero) //it moved
         {
             energySystem.UseEnergy(.25f);
@@ -74,10 +84,23 @@ public class BeaverController : MonoBehaviour
         Debug.Log("Leaving collision");
         if (other.TryGetComponent<IInteractable>(out var interactable))
         {
-            
+
             nearbyInteractables.Remove(interactable);
             Debug.Log($"Removing interactable. Interactables count is now {nearbyInteractables.Count}");
         }
     }
-
+    Vector3 calcDirRelToCam(Transform transform, Vector3 moveInput)
+    {
+        float horizontalInput = moveInput.x;
+        float verticalInput = moveInput.y;
+        move = new Vector3(horizontalInput, 0, verticalInput);
+        Vector3 camForward = cam.forward;
+        Vector3 camRight = cam.right;
+        camForward.y = 0;
+        camRight.y = 0;
+        Vector3 forwardRelative = camForward * verticalInput;
+        Vector3 rightRelative = camRight * horizontalInput; ;
+        return forwardRelative + rightRelative;
 }
+}
+

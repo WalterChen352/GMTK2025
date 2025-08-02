@@ -1173,6 +1173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  interactionZone: {fileID: 0}
+  cam: {fileID: 519420032}
 --- !u!114 &1938272822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1214,6 +1216,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 841c7efe-2d68-46b9-8704-9d55e11c0b0c
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e0346a6b-f783-43ea-8911-56c85f656539
+    m_ActionName: 'Player/Interact[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

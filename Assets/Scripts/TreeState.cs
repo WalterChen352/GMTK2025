@@ -8,6 +8,7 @@ public class TreeState : MonoBehaviour, IInteractable
     public bool IsInteractable { get; set; }
     public Outline outline;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public int Health;
     void Start()
     {
         beaver = GameObject.Find("Beaver");
@@ -16,6 +17,11 @@ public class TreeState : MonoBehaviour, IInteractable
         Hitpoints = 4;
         IsInteractable = true;
         outline.enabled = false;
+    }
+
+    public void Initialize(int health)
+    {
+        Health = health;
     }
 
     public void Interact()

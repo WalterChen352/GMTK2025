@@ -1168,7 +1168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  interactionZone: {fileID: 1938272824}
+  interactionZone: {fileID: 0}
+  cam: {fileID: 519420032}
 --- !u!114 &1938272822
 MonoBehaviour:
   m_ObjectHideFlags: 0

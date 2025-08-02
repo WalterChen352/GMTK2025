@@ -2,31 +2,48 @@ using UnityEngine;
 
 public class BushState : MonoBehaviour, IInteractable
 {
+    public FoodCounter foodCounter;
     public int BerryCount;
+    public GameObject beaver;
+    public Outline outline;
+    public void Start()
+    {
+        beaver = GameObject.Find("Beaver");
+        foodCounter = beaver.GetComponent<FoodCounter>();
+        outline = GetComponent<Outline>();
+        outline.enabled = false;
+    }
+
+    public void Highlight(bool on)
+    {
+        if (on)
+        {
+            outline.enabled = true;
+        } else {
+            outline.enabled = false;
+        }
+    }
     public void Interact()
     {
         Debug.Log("Bush interacted with!");
-        if(BerryCount > 0)
+        if (BerryCount > 0)
         {
-            //give berries to the beaver
+            CollectBerries();
 
-            
             Debug.Log($"Berry gave {BerryCount} berries to the beaver");
             BerryCount = 0;
         }
 
     }
-
+    private void CollectBerries()
+    {
+        foodCounter.AddFood(BerryCount);
+    }
     public void Initialize(int berryCount)
     {
         BerryCount = berryCount;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
 
     // Update is called once per frame

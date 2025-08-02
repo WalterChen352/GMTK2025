@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,7 +6,8 @@ public class BeaverController : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private StandardInputs input;
-    [SerializeField] private SpherecastCommand interactionZone;
+    [SerializeField] private SphereCollider interactionZone;
+    private readonly List<IInteractable> nearbyInteractables = new();
     private Vector2 moveInput;
     private Rigidbody rb;
 
@@ -30,6 +32,10 @@ public class BeaverController : MonoBehaviour
         if (context.started)
         {
             Debug.Log("Beaver interacting!");
+            if(nearbyInteractables.Count > 0)
+            {
+                nearbyInteractables[0].Interact();
+            }
         }
     }
 
@@ -38,6 +44,28 @@ public class BeaverController : MonoBehaviour
 
         Vector3 move = new Vector3(moveInput.x, 0, moveInput.y);
         rb.linearVelocity = move * speed;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Entering collision");
+        if (other.TryGetComponent<IInteractable>(out var interactable))
+        {
+
+            nearbyInteractables.Add(interactable);
+            Debug.Log($"Adding interactable. Interactables count is now {nearbyInteractables.Count}");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Leaving collision");
+        if (other.TryGetComponent<IInteractable>(out var interactable))
+        {
+            
+            nearbyInteractables.Remove(interactable);
+            Debug.Log($"Removing interactable. Interactables count is now {nearbyInteractables.Count}");
+        }
     }
 
 }

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class SpeechBubble : MonoBehaviour
@@ -6,6 +7,7 @@ public class SpeechBubble : MonoBehaviour
     public Vector3 offset;
 
     [SerializeField] float easeSpeed;
+    [SerializeField] TextMeshProUGUI wordbox;
 
     public void Hide()
     {
@@ -16,6 +18,11 @@ public class SpeechBubble : MonoBehaviour
     {
         transform.position = attachTransform.position;
         gameObject.SetActive(true);
+    }
+
+    public void SetWords(string words)
+    {
+        wordbox.text = words;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

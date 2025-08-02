@@ -236,7 +236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ef4d15b4814b34e878ab391fc72426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
 --- !u!114 &7087331539443926945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +251,7 @@ MonoBehaviour:
   attachTransform: {fileID: 0}
   offset: {x: 0, y: 2.12, z: 0}
   easeSpeed: 5
+  wordbox: {fileID: 4166493486210014552}
 --- !u!1 &8545359201387292656
 GameObject:
   m_ObjectHideFlags: 0

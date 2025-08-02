@@ -268,6 +268,14 @@ MonoBehaviour:
   speed: 10
   interactionZone: {fileID: 7994270639809118164}
   cam: {fileID: 4487586137129666903}
+  towardsSprite: {fileID: 21300000, guid: c3e3dd1eb4c5ddd4f8bed190701979f6, type: 3}
+  towardsLeftSprite: {fileID: 21300000, guid: 16d5ebeee184a2f41ab00c6a879fb7e5, type: 3}
+  towardsRightSprite: {fileID: 21300000, guid: 8a3176dc6f6db104eb2dba50a40abc53, type: 3}
+  leftSprite: {fileID: 21300000, guid: c1ef0ff0f287ed1439a5c848d1107684, type: 3}
+  rightSprite: {fileID: 21300000, guid: 5058cc61f204c8d48a3d45ad2bc2131f, type: 3}
+  awayLeftSprite: {fileID: 21300000, guid: cc355b80a1d9cbd408c50dca7575d22a, type: 3}
+  awayRightSprite: {fileID: 21300000, guid: 7c1e8abf48a1f4846af49771daa40d93, type: 3}
+  awaySprite: {fileID: 21300000, guid: 45472330b03ae6345811546d29f72db3, type: 3}
 --- !u!114 &6823422942792190685
 MonoBehaviour:
   m_ObjectHideFlags: 0

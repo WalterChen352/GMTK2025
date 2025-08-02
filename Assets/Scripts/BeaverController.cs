@@ -9,10 +9,21 @@ public class BeaverController : MonoBehaviour
     [SerializeField] private SphereCollider interactionZone;
 
     [SerializeField] Transform cam;
+
+    [SerializeField] Sprite towardsSprite;
+    [SerializeField] Sprite towardsLeftSprite;
+    [SerializeField] Sprite towardsRightSprite;
+    [SerializeField] Sprite leftSprite;
+    [SerializeField] Sprite rightSprite;
+    [SerializeField] Sprite awayLeftSprite;
+    [SerializeField] Sprite awayRightSprite;
+    [SerializeField] Sprite awaySprite;
+
     private Vector3 move;
     private readonly List<IInteractable> nearbyInteractables = new();
     private Vector2 moveInput;
     private Rigidbody rb;
+    private SpriteRenderer spriteRenderer;
     private EnergySystem energySystem;
     private WoodCounter woodCounter;
     private FoodCounter foodCounter;
@@ -20,6 +31,7 @@ public class BeaverController : MonoBehaviour
     public void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         energySystem = GetComponent<EnergySystem>();
         woodCounter = GetComponent<WoodCounter>();
         foodCounter = GetComponent<FoodCounter>();
@@ -39,6 +51,42 @@ public class BeaverController : MonoBehaviour
             //Debug.Log(context.ReadValue<Vector2>());
         }
         moveInput = context.ReadValue<Vector2>();
+        if (moveInput != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(moveInput.y, moveInput.x) * Mathf.Rad2Deg;
+            if (-157.5 <= angle && angle < -112.5)
+            {
+                spriteRenderer.sprite = towardsLeftSprite;
+            }
+            else if (-112.5 <= angle && angle < -67.5)
+            {
+                spriteRenderer.sprite = towardsSprite;
+            }
+            else if (-67.5 <= angle && angle < -22.5)
+            {
+                spriteRenderer.sprite = towardsRightSprite;
+            }
+            else if (-22.5 <= angle && angle < 22.5)
+            {
+                spriteRenderer.sprite = rightSprite;
+            }
+            else if (22.5 <= angle && angle < 67.5)
+            {
+                spriteRenderer.sprite = awayRightSprite;
+            }
+            else if (67.5 <= angle && angle < 112.5)
+            {
+                spriteRenderer.sprite = awaySprite;
+            }
+            else if (112.5 <= angle && angle < 157.5)
+            {
+                spriteRenderer.sprite = awayLeftSprite;
+            }
+            else if (157.5 <= angle || angle < -157.5)
+            {
+                spriteRenderer.sprite = leftSprite;
+            }
+        }
     }
 
     public void OnInteract(InputAction.CallbackContext context)

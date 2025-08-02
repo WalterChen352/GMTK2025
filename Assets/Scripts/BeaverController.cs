@@ -10,10 +10,13 @@ public class BeaverController : MonoBehaviour
     private readonly List<IInteractable> nearbyInteractables = new();
     private Vector2 moveInput;
     private Rigidbody rb;
+    private EnergySystem energySystem;
 
     public void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        energySystem = GetComponent<EnergySystem>();
+
     }
 
 
@@ -43,7 +46,11 @@ public class BeaverController : MonoBehaviour
     {
 
         Vector3 move = new Vector3(moveInput.x, 0, moveInput.y);
-        rb.linearVelocity = move * speed;
+        rb.linearVelocity = move * speed; 
+        if (moveInput != Vector2.zero) //it moved
+        {
+            energySystem.UseEnergy(.25f);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

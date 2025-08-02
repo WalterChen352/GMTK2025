@@ -51,6 +51,11 @@ public class PauseMenu : MonoBehaviour
         uiGroup.audioMixer.SetFloat("UIVolume", VolumeToDecibel(volume));
     }
 
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
     private void Awake()
     {
         if (instance)

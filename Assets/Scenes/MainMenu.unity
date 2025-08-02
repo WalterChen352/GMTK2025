@@ -1621,6 +1621,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3138979655246028222, guid: 284a1dec177f70a4e90b836c6903a44c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -113
+      objectReference: {fileID: 0}
     - target: {fileID: 3914430724477525381, guid: 284a1dec177f70a4e90b836c6903a44c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1753,12 +1757,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 7632320377074284686, guid: 284a1dec177f70a4e90b836c6903a44c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1407281502912215250, guid: 284a1dec177f70a4e90b836c6903a44c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 284a1dec177f70a4e90b836c6903a44c, type: 3}

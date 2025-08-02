@@ -5,6 +5,7 @@ public class BeaverController : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private StandardInputs input;
+    [SerializeField] private SpherecastCommand interactionZone;
     private Vector2 moveInput;
     private Rigidbody rb;
 
@@ -22,6 +23,14 @@ public class BeaverController : MonoBehaviour
             //Debug.Log(context.ReadValue<Vector2>());
         }
         moveInput = context.ReadValue<Vector2>();
+    }
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            Debug.Log("Beaver interacting!");
+        }
     }
 
     public void FixedUpdate()

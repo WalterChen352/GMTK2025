@@ -11,11 +11,13 @@ public class EnergySystem : MonoBehaviour
         currentEnergy = maxEnergy;
         energySlider.maxValue = maxEnergy;
         energySlider.value = currentEnergy;
+        Debug.Log(currentEnergy);
     }
     public void UseEnergy(float energyCost)
     {
         currentEnergy -= energyCost;
         Debug.Log($"Used {energyCost} to beaver for total of {currentEnergy}");
+        energySlider.value = currentEnergy;
 
     }
 
@@ -23,6 +25,11 @@ public class EnergySystem : MonoBehaviour
     {
         currentEnergy = Mathf.Min(currentEnergy + energyAmount, maxEnergy);
         Debug.Log($"Added {energyAmount} to beaver for total of {currentEnergy}");
+        energySlider.value = currentEnergy;
+    }
+    public float EnergyValue()
+    {
+        return currentEnergy;
     }
 
     }

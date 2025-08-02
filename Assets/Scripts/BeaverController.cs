@@ -9,12 +9,14 @@ public class BeaverController : MonoBehaviour
     private Rigidbody rb;
     private EnergySystem energySystem;
     private WoodCounter woodCounter;
+    private FoodCounter foodCounter;
 
     public void Awake()
     {
         rb = GetComponent<Rigidbody>();
         energySystem = GetComponent<EnergySystem>();
         woodCounter = GetComponent<WoodCounter>();
+        foodCounter = GetComponent<FoodCounter>();
 
     }
 
@@ -37,8 +39,7 @@ public class BeaverController : MonoBehaviour
         if (moveInput != Vector2.zero) //it moved
         {
             energySystem.UseEnergy(.25f);
-            woodCounter.AddWood(1);
-            Debug.Log(woodCounter);
+            foodCounter.AddFood(1);
         }
     }
 

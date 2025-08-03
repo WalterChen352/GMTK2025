@@ -15,17 +15,26 @@ public class WoodCounter : MonoBehaviour
     void Start()
     {
 
-        woodCounter.text = "Wood: " + currentWood.ToString();
+        woodCounter.text = currentWood.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    public void AddWood(int v)
+    public bool AddWood(int v)
     {
-        currentWood += v;
-            woodCounter.text = "Wood: " + currentWood.ToString();
+        if (currentWood + v >= 0)
+        {
+            Debug.Log($"Adding wood: {v}");
+            currentWood += v;
+            woodCounter.text = currentWood.ToString();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

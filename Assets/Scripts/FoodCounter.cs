@@ -15,7 +15,7 @@ public class FoodCounter : MonoBehaviour
     void Start()
     {
 
-        foodCounter.text = "Food: " + currentFood.ToString();
+        foodCounter.text = currentFood.ToString();
     }
 
     // Update is called once per frame
@@ -23,9 +23,20 @@ public class FoodCounter : MonoBehaviour
     {
         
     }
-    public void AddFood(int v)
+    public bool AddFood(int v)
     {
         currentFood += v;
-        foodCounter.text = "Food: " + currentFood.ToString();
+        foodCounter.text = currentFood.ToString();
+        if (currentFood+ v >= 0)
+        {
+            Debug.Log($"Adding wood: {v}");
+            currentFood += v;
+            foodCounter.text = currentFood.ToString();
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

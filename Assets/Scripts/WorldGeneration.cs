@@ -44,6 +44,12 @@ public class WorldGeneration: MonoBehaviour
             //spawn pos: Vector3, position to put
             //
             GameObject obj = Instantiate(prefab, spawnPos, Quaternion.identity);
+            if (Random.Range(0,1) == 0)
+            {
+                obj.GetComponentInChildren<SpriteRenderer>().flipX = true;
+            }
+            
+            
             if (prefab.name == "Bush")
             {
                 BushState bushState = obj.GetComponent<BushState>();

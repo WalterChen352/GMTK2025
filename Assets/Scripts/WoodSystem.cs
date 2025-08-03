@@ -26,6 +26,6 @@ public class WoodCounter : MonoBehaviour
     public void AddWood(int v)
     {
         currentWood += v;
-        woodCounter.text = "Wood: " + currentWood.ToString();
+            woodCounter.text = "Wood: " + currentWood.ToString();
     }
 }

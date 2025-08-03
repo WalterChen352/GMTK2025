@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class TreeState : MonoBehaviour, IInteractable
 {
@@ -15,11 +16,19 @@ public class TreeState : MonoBehaviour, IInteractable
     public int Health;
     public Rigidbody TrunkRB;
     public float Push = 100f;
-    public GameObject trunk;  
+    public GameObject trunk;
+    public float minDamage= 4/3 +(float)0.01; //range is 3-6 bites if dealing 4 damage over 3 hits 4/3
+    public float maxDamage= 4/6+ (float)0.01;
+
+    public float baseEnergyCost= 10;
+    public int timesEaten = 0;
+    public float costFactor=(float) 1.2;
+    private float damage;
     
 
     void Start()
     {
+        damage = UnityEngine.Random.Range(minDamage, maxDamage);
         Hitpoints = Startinghitpoints;
         beaver = GameObject.Find("Beaver");
         woodCounter = beaver.GetComponent<WoodCounter>();
@@ -61,6 +70,17 @@ public class TreeState : MonoBehaviour, IInteractable
     {
         if (IsInteractable == true)
         {
+            float energyCost = (float)(baseEnergyCost*  Math.Pow(costFactor, timesEaten));
+            timesEaten++;
+            var EnergySystem = beaver.GetComponent<EnergySystem>();
+            if(EnergySystem == null)
+            {
+                Debug.LogError("beaver's energy systme not found");
+            }
+            else
+            {
+                EnergySystem.AddEnergy(-energyCost);
+            }
             ChopTree();
             Debug.Log("Tree interacted with");
         }

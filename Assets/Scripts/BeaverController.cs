@@ -5,7 +5,9 @@ using UnityEngine.InputSystem;
 
 public class BeaverController : MonoBehaviour
 {
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private float speed;
+    [SerializeField] float energyDecay = 1f;
     [SerializeField] private StandardInputs input;
     [SerializeField] private BoxCollider interactionZone;
 
@@ -53,71 +55,77 @@ public class BeaverController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        //Button Clicked
-        if (context.phase == InputActionPhase.Started)
+        if (gameManager.gameState == gameStates.Active)
         {
-            //Debug.Log(context.ReadValue<Vector2>());
-        }
-        moveInput = context.ReadValue<Vector2>();
-        if (moveInput == Vector2.zero)
-        {
-            animator.SetBool("IsMoving", false);
-            audioSource.Stop();
-            isMoving = false;
-        }
-        else
-        {
-            if (!isMoving)
+            //Button Clicked
+            if (context.phase == InputActionPhase.Started)
             {
-                animator.SetBool("IsMoving", true);
-                audioSource.clip = walkingAudio;
-                audioSource.Play();
-                isMoving = true;
+                //Debug.Log(context.ReadValue<Vector2>());
             }
-            float angle = Mathf.Atan2(moveInput.y, moveInput.x) * Mathf.Rad2Deg;
-            if (-157.5 <= angle && angle < -112.5)
+            moveInput = context.ReadValue<Vector2>();
+            if (moveInput == Vector2.zero)
             {
-                spriteRenderer.sprite = towardsLeftSprite;
+                animator.SetBool("IsMoving", false);
+                audioSource.Stop();
+                isMoving = false;
             }
-            else if (-112.5 <= angle && angle < -67.5)
+            else
             {
-                spriteRenderer.sprite = towardsSprite;
-            }
-            else if (-67.5 <= angle && angle < -22.5)
-            {
-                spriteRenderer.sprite = towardsRightSprite;
-            }
-            else if (-22.5 <= angle && angle < 22.5)
-            {
-                spriteRenderer.sprite = rightSprite;
-            }
-            else if (22.5 <= angle && angle < 67.5)
-            {
-                spriteRenderer.sprite = awayRightSprite;
-            }
-            else if (67.5 <= angle && angle < 112.5)
-            {
-                spriteRenderer.sprite = awaySprite;
-            }
-            else if (112.5 <= angle && angle < 157.5)
-            {
-                spriteRenderer.sprite = awayLeftSprite;
-            }
-            else if (157.5 <= angle || angle < -157.5)
-            {
-                spriteRenderer.sprite = leftSprite;
+                if (!isMoving)
+                {
+                    animator.SetBool("IsMoving", true);
+                    audioSource.clip = walkingAudio;
+                    audioSource.Play();
+                    isMoving = true;
+                }
+                float angle = Mathf.Atan2(moveInput.y, moveInput.x) * Mathf.Rad2Deg;
+                if (-157.5 <= angle && angle < -112.5)
+                {
+                    spriteRenderer.sprite = towardsLeftSprite;
+                }
+                else if (-112.5 <= angle && angle < -67.5)
+                {
+                    spriteRenderer.sprite = towardsSprite;
+                }
+                else if (-67.5 <= angle && angle < -22.5)
+                {
+                    spriteRenderer.sprite = towardsRightSprite;
+                }
+                else if (-22.5 <= angle && angle < 22.5)
+                {
+                    spriteRenderer.sprite = rightSprite;
+                }
+                else if (22.5 <= angle && angle < 67.5)
+                {
+                    spriteRenderer.sprite = awayRightSprite;
+                }
+                else if (67.5 <= angle && angle < 112.5)
+                {
+                    spriteRenderer.sprite = awaySprite;
+                }
+                else if (112.5 <= angle && angle < 157.5)
+                {
+                    spriteRenderer.sprite = awayLeftSprite;
+                }
+                else if (157.5 <= angle || angle < -157.5)
+                {
+                    spriteRenderer.sprite = leftSprite;
+                }
             }
         }
     }
 
     public void OnInteract(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (gameManager.gameState == gameStates.Active)
         {
-            Debug.Log("Beaver interacting!");
-            if (nearbyInteractables.Count > 0)
+            if (context.started)
             {
-                nearbyInteractables[0].Interact();
+                Debug.Log("Beaver interacting!");
+                if (nearbyInteractables.Count > 0)
+                {
+                    nearbyInteractables[0].Interact();
+                }
             }
         }
     }
@@ -140,7 +148,11 @@ public class BeaverController : MonoBehaviour
         rb.linearVelocity = new Vector3(moveDir.x, 0, moveDir.z) * speed;
         if (moveInput != Vector2.zero) //it moved
         {
+<<<<<<< Updated upstream
             energySystem.UseEnergy(.1f);
+=======
+            energySystem.UseEnergy(.25f * energyDecay);
+>>>>>>> Stashed changes
         }
     }
 

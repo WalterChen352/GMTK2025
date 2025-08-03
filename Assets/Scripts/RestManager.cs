@@ -1,4 +1,5 @@
 
+using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -75,10 +76,8 @@ public class RestManager : MonoBehaviour
         }
         //If the player is trying to add wood to the pile but doesn't have wood to add, is trying to add wood back to their inventory or is trying to add wood from the pile
     }
-
     public void StartUp()
     {
-        playerEnergy.SetEnergy(0);
         spentFood = 0;
         foodCounter.text = spentFood.ToString();
     }

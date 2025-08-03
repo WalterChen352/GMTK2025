@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outline: {fileID: 2250100258029621777}
+  advanceDay: {fileID: 11400000, guid: 8b22e6ec2ab2f2a45b97274953d07b75, type: 2}
 --- !u!114 &2250100258029621777
 MonoBehaviour:
   m_ObjectHideFlags: 0

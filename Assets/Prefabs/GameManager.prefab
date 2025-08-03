@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9105848483298462200}
   - component: {fileID: 2688647515583618414}
+  - component: {fileID: 6103893800141211081}
+  - component: {fileID: 7669883383759129336}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,3 +47,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uIAnimator: {fileID: 0}
+  damManager: {fileID: 6103893800141211081}
+  restManager: {fileID: 7669883383759129336}
+  energySystem: {fileID: 0}
+--- !u!114 &6103893800141211081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8053958798364682468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 340e7d6216d45874cb3596133217ab43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterLevel: 0
+  damLevel: 1
+  maxDam: 100
+  consumedWood: 0
+  woodHolder: {fileID: 0}
+  damUIBounds: {fileID: 0}
+  damLine: {fileID: 0}
+  waterBounds: {fileID: 0}
+  woodCounter: {fileID: 0}
+--- !u!114 &7669883383759129336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8053958798364682468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473429203c811814f9d7f12edcefbcca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodValue: 4
+  playerEnergy: {fileID: 0}
+  playerFood: {fileID: 0}
+  foodCounter: {fileID: 0}

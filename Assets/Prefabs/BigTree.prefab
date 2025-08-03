@@ -162,13 +162,12 @@ MonoBehaviour:
   - {fileID: -5918569282521756918, guid: 125406174530acc4d80d20e01060e9a7, type: 3}
   Sprite: {fileID: 0}
   outline: {fileID: -4559166831495402896}
-  Health: 0
   TrunkRB: {fileID: 0}
   Push: 50
   trunk: {fileID: 5206884871767308743, guid: c23fae5969c317a4faabe981175bd866, type: 3}
   minDamage: 1.01
   maxDamage: 0.01
-  baseEnergyCost: 10
+  baseEnergyCost: 5
   timesEaten: 0
   costFactor: 1.2
 --- !u!114 &-4559166831495402896

@@ -148,11 +148,7 @@ public class BeaverController : MonoBehaviour
         rb.linearVelocity = new Vector3(moveDir.x, 0, moveDir.z) * speed;
         if (moveInput != Vector2.zero) //it moved
         {
-<<<<<<< Updated upstream
-            energySystem.UseEnergy(.1f);
-=======
             energySystem.UseEnergy(.25f * energyDecay);
->>>>>>> Stashed changes
         }
     }
 

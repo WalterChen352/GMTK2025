@@ -97,7 +97,7 @@ public class TreeState : MonoBehaviour, IInteractable
         if (Hitpoints > 0)
         {
             Debug.Log("Chopping...");
-            Hitpoints -= 1;
+            Hitpoints -= damage;
         }
 
         if (Hitpoints <=2 && Hitpoints> 1)

@@ -124,6 +124,7 @@ public class BeaverController : MonoBehaviour
                 interactable.Interact();
                 if (!interactable.IsInteractable)
                 {
+                    interactable.Highlight(false);
                     interactable = null;
                 }
                 Debug.Log("Beaver interacting!");

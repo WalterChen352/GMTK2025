@@ -12,6 +12,7 @@ public class Snail : MonoBehaviour, IInteractable
     SpriteRenderer spriteRenderer;
     Animator animator;
     Outline outline;
+    SpeechBubble speechBubble;
 
     bool moving = false;
     float timeTilMove = 0f;
@@ -24,7 +25,8 @@ public class Snail : MonoBehaviour, IInteractable
     {
         if (IsInteractable)
         {
-            Debug.Log("Snail interacted with");
+            speechBubble.SetWords("Hello, I'm a snail!");
+            speechBubble.Show();
         }
     }
 
@@ -44,6 +46,7 @@ public class Snail : MonoBehaviour, IInteractable
                 moveDirection = new Vector3(Random.Range(-1f, 1f), 0f, Random.Range(-1f, 1f));
             }
             outline.enabled = false;
+            speechBubble.Hide();
         }
     }
 
@@ -53,6 +56,8 @@ public class Snail : MonoBehaviour, IInteractable
         animator = GetComponentInChildren<Animator>();
         outline = GetComponentInChildren<Outline>();
         outline.enabled = false;
+        speechBubble = GetComponentInChildren<SpeechBubble>();
+        speechBubble.Hide();
         timeTilMove = Random.Range(minStartWaitTime, maxStartWaitTime);
     }
 

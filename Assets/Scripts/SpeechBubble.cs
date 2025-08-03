@@ -25,12 +25,6 @@ public class SpeechBubble : MonoBehaviour
         wordbox.text = words;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        Hide();
-    }
-
     // Update is called once per frame
     void Update()
     {

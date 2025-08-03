@@ -7,12 +7,16 @@ public class BushState : MonoBehaviour, IInteractable
     public GameObject beaver;
     public Outline outline;
     public bool IsInteractable { get; set; }
+
+    AudioSource audioSource;
+
     public void Start()
     {
         beaver = GameObject.Find("Beaver");
         foodCounter = beaver.GetComponent<FoodCounter>();
         outline = GetComponent<Outline>();
         outline.enabled = false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void Highlight(bool on)
@@ -29,6 +33,7 @@ public class BushState : MonoBehaviour, IInteractable
         Debug.Log("Bush interacted with!");
         if (BerryCount > 0)
         {
+            audioSource.Play();
             CollectBerries();
 
             Debug.Log($"Berry gave {BerryCount} berries to the beaver");

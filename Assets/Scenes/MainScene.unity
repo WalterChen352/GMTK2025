@@ -665,6 +665,8 @@ MonoBehaviour:
   PrefabsDecor:
   - {fileID: 8094925912905774718, guid: fdeaf284f87b0e846a22415f463050bd, type: 3}
   - {fileID: 6072648752724422445, guid: cdcc8e23d2d597a45af9b717277281e6, type: 3}
+  - {fileID: 5098498952654406671, guid: 80c5c6513800d7f4aa658748f1fc8253, type: 3}
+  - {fileID: 7015595705863568192, guid: 0eefd58da757ca241882035ee622b2e7, type: 3}
   SpawnArea: {x: 185, y: 184}
   ScaleRange: {x: 0.8, y: 1.2}
   StartingPoint: {x: -96, y: -151}

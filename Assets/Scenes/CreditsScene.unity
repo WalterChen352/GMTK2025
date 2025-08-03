@@ -1528,7 +1528,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Free Assets used:\n\"Sergio's Magic Dustbin \" Kevin MacLeod (incompetech.com)\r\nLicensed
+  m_text: "Free Assets used:\n\nSounds from freesound.org:\nBeaver chomping on a
+    log (3.33m).m4a by Mobius_Play109 -- https://freesound.org/s/685527/ -- License:
+    Attribution 4.0\nDuck Flapping Wings by OwennewO -- https://freesound.org/s/719107/
+    -- License: Creative Commons 0 \ntimber.wav by hazure -- https://freesound.org/s/23709/
+    -- License: Attribution 3.0\nRunning through grass by Slave2theLight -- https://freesound.org/s/157037/
+    -- License: Attribution 4.0\nCannonball Hitting Ship (Interior) (Mixed) by EvanBoyerman
+    -- https://freesound.org/s/388527/ -- License: Attribution NonCommercial 3.0\nR16-01-Structure
+    Falling.wav by craigsmith -- https://freesound.org/s/487128/ -- License: Creative
+    Commons 0\nWater Explosion by Sheyvan -- https://freesound.org/s/519008/ -- License:
+    Creative Commons 0\n\nVarious sound effects from kenny.nl.\n\nMusic by Kevin
+    MacLeod:\n\"Sergio's Magic Dustbin \" Kevin MacLeod (incompetech.com)\r\nLicensed
     under Creative Commons: By Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\n\"Suonatore
     di Liuto\" Kevin MacLeod (incompetech.com)\r\nLicensed under Creative Commons:
     By Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\r\n\r\"sound1\"

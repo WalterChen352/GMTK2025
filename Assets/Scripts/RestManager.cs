@@ -33,15 +33,6 @@ public class RestManager : MonoBehaviour
         //StartUp();
     }
 
-    //DELETE
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            StartUp();
-        }
-    }
-
     //Removes or adds food to the big bar to generate energy, removing the food from their inventory
     void SpendFood(int inputFood)
     {

@@ -88,14 +88,6 @@ public class GameManager : MonoBehaviour
         restManager.StartUp();
         dayState = dayStates.Eat;
     }
-    // DELETE
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            AdvanceState();
-        }
-    }
 
     void TriggerFade(bool input)
     {

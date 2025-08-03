@@ -82,7 +82,7 @@ public class DamManager : MonoBehaviour
         spentWood = 0;
         woodCounter.text = "0";
         maxWood = woodHolder.currentWood;
-        UpdateWater(1, 4);
+        UpdateWater(2, 5);
     }
 
     public void UpdateWater(int min, int max)

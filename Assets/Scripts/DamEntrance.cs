@@ -8,7 +8,7 @@ public class DamEntrance : MonoBehaviour, IInteractable
     void Start()
     {
         IsInteractable = true;
-        outline = GetComponent<Outline>();
+        outline = GetComponentInChildren<Outline>();
         outline.enabled = false;
     }
     public void Highlight(bool on)

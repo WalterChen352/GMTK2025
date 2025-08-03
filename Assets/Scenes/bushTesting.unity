@@ -1139,14 +1139,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e20ed31d136254048b16bb36005c3a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Startinghitpoints: 4
   Hitpoints: 0
   woodCounter: {fileID: 0}
   beaver: {fileID: 0}
   Sprites: []
   Sprite: {fileID: 0}
   outline: {fileID: 0}
-  Health: 0
   TrunkRB: {fileID: 0}
   Push: 50
   trunk: {fileID: 0}
@@ -1155,6 +1153,63 @@ MonoBehaviour:
   baseEnergyCost: 10
   timesEaten: 0
   costFactor: 1.2
+--- !u!1001 &763677398
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 45203885589525439, guid: 4b880d1d029783342b55c683a613f942, type: 3}
+      propertyPath: m_Name
+      value: SmallTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687891009839164707, guid: 4b880d1d029783342b55c683a613f942, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687891009839164707, guid: 4b880d1d029783342b55c683a613f942, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687891009839164707, guid: 4b880d1d029783342b55c683a613f942, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687891009839164707, guid: 4b880d1d029783342b55c683a613f942, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687891009839164707, guid: 4b880d1d029783342b55c683a613f942, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687891009839164707, guid: 4b880d1d029783342b55c683a613f942, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687891009839164707, guid: 4b880d1d029783342b55c683a613f942, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687891009839164707, guid: 4b880d1d029783342b55c683a613f942, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687891009839164707, guid: 4b880d1d029783342b55c683a613f942, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687891009839164707, guid: 4b880d1d029783342b55c683a613f942, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b880d1d029783342b55c683a613f942, type: 3}
 --- !u!114 &1021004899 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7608752998174502226, guid: b72409884a14c1d498a483407d3ecb58, type: 3}
@@ -1945,10 +2000,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigTree
       objectReference: {fileID: 0}
-    - target: {fileID: 4088814305880868915, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
-      propertyPath: m_RenderingLayerMask
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7687891009839164707, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.7164154
@@ -2020,3 +2071,4 @@ SceneRoots:
   - {fileID: 73725026}
   - {fileID: 185704865}
   - {fileID: 1173341612}
+  - {fileID: 763677398}

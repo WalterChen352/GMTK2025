@@ -15,11 +15,8 @@ public class TreeState : MonoBehaviour, IInteractable
     public int Health;
     public Rigidbody TrunkRB;
     public float Push = 100f;
-
-    [Header("Tree Parts")]
-    public GameObject fullTree; 
     public GameObject trunk;  
-    public GameObject stump;    
+    
 
     void Start()
     {
@@ -27,7 +24,6 @@ public class TreeState : MonoBehaviour, IInteractable
         beaver = GameObject.Find("Beaver");
         woodCounter = beaver.GetComponent<WoodCounter>();
         outline = GetComponent<Outline>();
-        TrunkRB = GetComponent<Rigidbody>();
         Hitpoints = 4;
         IsInteractable = true;
         outline.enabled = false;
@@ -111,40 +107,27 @@ public class TreeState : MonoBehaviour, IInteractable
     }
     public void TreeFall()
     {
-        if (fullTree != null)
+        bool fallRight = beaver.transform.position.x >= this.transform.position.x ;
+        Vector3 pos = transform.position;
+        if (fallRight)
         {
-            // Get the fulltree sprite position and rotation
-            Vector3 treePosition = fullTree.transform.position;
-            Quaternion treeRotation = fullTree.transform.rotation;
-
-            // Disable the full tree
-            fullTree.SetActive(false);
-
-            if (stump != null)
-            {
-                stump.SetActive(true);
-                // Set stump to the same position/rotation as the full tree
-                stump.transform.position = treePosition;
-                stump.transform.rotation = treeRotation;
-            }
-
-            if (trunk != null)
-            {
-                trunk.SetActive(true);
-                // Set trunk to the same position/rotation as the full tree
-                trunk.transform.position = treePosition;
-                trunk.transform.rotation = treeRotation;
-
-                // Enable physics for the trunk
-                if (TrunkRB != null)
-                {
-                    TrunkRB.isKinematic = false;
-                    TrunkRB.useGravity = true;
-                    // Apply force to make the trunk fall
-                    TrunkRB.AddForce(beaver.transform.forward * Push, ForceMode.Impulse);
-                }
-            }
+            pos.z += 1;
+            pos.x += (float).25;
+            pos.y += (float)0.25;
+            var trunkCopy = Instantiate(trunk, pos, Quaternion.identity);
+            Rigidbody rb = trunkCopy.GetComponent<Rigidbody>();
+            rb.AddTorque(new Vector3(0, 0, 1000), ForceMode.Impulse);
         }
+        else
+        {
+            pos.z += (float)0.75;
+            pos.x += (float).25;
+            //pos.y += (float)0.25;
+            var trunkCopy = Instantiate(trunk, pos, Quaternion.identity);
+            Rigidbody rb = trunkCopy.GetComponent<Rigidbody>();
+            rb.AddTorque(new Vector3(0, 0, -1000), ForceMode.Impulse);
+        }
+        
 
         IsInteractable = false;
         outline.enabled = false;

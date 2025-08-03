@@ -54,7 +54,7 @@ public class WorldGeneration: MonoBehaviour
             }
 
             float scale = Random.Range(ScaleRange.x, ScaleRange.y);
-            obj.transform.localScale = Vector3.one * scale;
+            obj.transform.localScale =obj.transform.localScale* scale;
         }
     }
 }

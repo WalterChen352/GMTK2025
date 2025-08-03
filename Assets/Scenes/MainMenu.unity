@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reincarnated to an Enchanted Forest
+  m_text: "I got Reincarnated into a Beaver\u2014My Adventures in an Enchanted Forest!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c37560de7a89e424ba0efb0b05a9e936, type: 2}
   m_sharedMaterial: {fileID: -7343134070022885650, guid: c37560de7a89e424ba0efb0b05a9e936, type: 2}

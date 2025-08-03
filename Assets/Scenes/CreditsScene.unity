@@ -1528,21 +1528,31 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Free Assets used:\n\nSounds from freesound.org:\nBeaver chomping on a
-    log (3.33m).m4a by Mobius_Play109 -- https://freesound.org/s/685527/ -- License:
-    Attribution 4.0\nDuck Flapping Wings by OwennewO -- https://freesound.org/s/719107/
-    -- License: Creative Commons 0 \ntimber.wav by hazure -- https://freesound.org/s/23709/
-    -- License: Attribution 3.0\nRunning through grass by Slave2theLight -- https://freesound.org/s/157037/
-    -- License: Attribution 4.0\nCannonball Hitting Ship (Interior) (Mixed) by EvanBoyerman
-    -- https://freesound.org/s/388527/ -- License: Attribution NonCommercial 3.0\nR16-01-Structure
-    Falling.wav by craigsmith -- https://freesound.org/s/487128/ -- License: Creative
-    Commons 0\nWater Explosion by Sheyvan -- https://freesound.org/s/519008/ -- License:
-    Creative Commons 0\n\nVarious sound effects from kenny.nl.\n\nMusic by Kevin
-    MacLeod:\n\"Sergio's Magic Dustbin \" Kevin MacLeod (incompetech.com)\r\nLicensed
-    under Creative Commons: By Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\n\"Suonatore
+  m_text: "Made by Clei B, Teddy C, Walter C, Teddy L, Boston M.\r\n\r\nFree Assets
+    used:\r\n\r\nSounds from freesound.org:\r\nBeaver chomping on a log (3.33m).m4a
+    by Mobius_Play109 -- https://freesound.org/s/685527/ -- License: Attribution
+    4.0\r\nDuck Flapping Wings by OwennewO -- https://freesound.org/s/719107/ --
+    License: Creative Commons 0 \r\ntimber.wav by hazure -- https://freesound.org/s/23709/
+    -- License: Attribution 3.0\r\nRunning through grass by Slave2theLight -- https://freesound.org/s/157037/
+    -- License: Attribution 4.0\r\nCannonball Hitting Ship (Interior) (Mixed) by
+    EvanBoyerman -- https://freesound.org/s/388527/ -- License: Attribution NonCommercial
+    3.0\r\nR16-01-Structure Falling.wav by craigsmith -- https://freesound.org/s/487128/
+    -- License: Creative Commons 0\r\nWater Explosion by Sheyvan -- https://freesound.org/s/519008/
+    -- License: Creative Commons 0\r\nDragonfly.wav by antoineopeng -- https://freesound.org/s/447319/
+    -- License: Creative Commons 0\r\nRustle.ogg by egomassive -- https://freesound.org/s/536767/
+    -- License: Attribution 3.0\r\nThe fall of a small ten-meter pine tree by Walking.With.Microphones
+    -- https://freesound.org/s/798282/ -- License: Creative Commons 0\r\nFirewood
+    Drop 5 by Frostnox -- https://freesound.org/s/796643/ -- License: Attribution
+    4.0\r\ncoronavirus forest NL Kampina LONG 200401_0141.ogg by klankbeeld -- https://freesound.org/s/512341/
+    -- License: Attribution 4.0\r\nWaves crashing on the shore in the mediterranean
+    sea, wide angle by flood-mix -- https://freesound.org/s/413328/ -- License: Attribution
+    3.0\r\nD311 Bigger Boat Engine.wav by billcutbill -- https://freesound.org/s/669395/
+    -- License: Attribution 4.0\r\n\r\nVarious sound effects from kenny.nl.\r\n\r\nMusic
+    by Kevin MacLeod:\r\n\"Sergio's Magic Dustbin \" Kevin MacLeod (incompetech.com)\r\nLicensed
+    under Creative Commons: By Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\r\n\"Suonatore
     di Liuto\" Kevin MacLeod (incompetech.com)\r\nLicensed under Creative Commons:
-    By Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\r\n\r\"sound1\"
-    by user1 ( http://freesound.org/s/soundID/ ) licensed under CCBYNC 4.0\n\n"
+    By Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\r\n\r\n\"sound1\"
+    by user1 ( http://freesound.org/s/soundID/ ) licensed under CCBYNC 4.0\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c37560de7a89e424ba0efb0b05a9e936, type: 2}
   m_sharedMaterial: {fileID: -7343134070022885650, guid: c37560de7a89e424ba0efb0b05a9e936, type: 2}
@@ -1704,7 +1714,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1533554947}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.27533317
+  m_Size: 0.39533317
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

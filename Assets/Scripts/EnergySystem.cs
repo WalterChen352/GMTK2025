@@ -37,10 +37,16 @@ public class EnergySystem : MonoBehaviour
         return currentEnergy;
     }
 
-    //Add loss state/condition here.
+    public void SetEnergy(float energyAmount)
+    {
+        currentEnergy = energyAmount;
+        Debug.Log($"Set energy to {currentEnergy}");
+        energySlider.value = currentEnergy;
+    }
     public void Death()
     {
         //Deathscreen
         SceneManager.LoadScene(4);
     }
-    }
+}
+

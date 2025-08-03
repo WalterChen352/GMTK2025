@@ -6,60 +6,66 @@ using UnityEngine;
 public class RestManager : MonoBehaviour
 {
 
-    /**public float waterLevel = 0f;
-    public float damLevel = 5f;
-    private float minDam;
-    public float maxEnergy = 100f;
-    private int spentWood;
-    public int consumedWood = 0;
-    private float spendableEnergy; //Amount of energy the player can spend
+    [Tooltip("How much energy each food gives")]
+    public float foodValue = 2.0f;
+    private int spentFood; //How much food the player is spending this turn
     [SerializeField]
     private EnergySystem playerEnergy;
     [SerializeField]
     private FoodCounter playerFood;
-    
+    [SerializeField]
+    private TextMeshProUGUI foodCounter;
 
-    private float uIHeight;
-
-    void Start()
+    public void AddFood(int inputFood)
     {
-        
-    }
-
-    void MoveBar(float relDist)
-    {
-        damLine.transform.position += new Vector3(0.0f, relDist, 0.0f);
-    }
-
-    public void AddWood(int inputWood)
-    {
-        Debug.Log("Calling wood");
-        if (CheckCanSpend(inputWood))
+        Debug.Log($"Calling food for {inputFood} food.");
+        if (CheckCanSpend(inputFood))
         {
-            SpendWood(inputWood);
+            SpendFood(inputFood);
         }
         //damLine.transform.position += new Vector3(0f, relativeDist, 0f);
         //StartCoroutine(MoveBar(relativeDist, 0.2f));
     }
-    void SpendWood(int inputWood)
+
+    void Start()
     {
-        Debug.Log($"Spending wood: {inputWood}");
-        spentWood += inputWood;
-        woodCounter.text = spentWood.ToString();
-        woodHolder.AddWood(-1 * inputWood);
-        float relativeDist = inputWood * uIHeight / maxDam;
-        MoveBar(relativeDist);
+        //StartUp();
     }
-    bool CheckCanSpend(int inputWood)
+
+    //DELETE
+    void Update()
     {
-        if (woodHolder.currentWood - inputWood < 0)
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            StartUp();
+        }
+    }
+
+    //Removes or adds food to the big bar to generate energy, removing the food from their inventory
+    void SpendFood(int inputFood)
+    {
+        Debug.Log($"Spending food: {inputFood}");
+        spentFood += inputFood;
+        foodCounter.text = spentFood.ToString();
+        playerFood.AddFood(-1 * inputFood); //Takes food from player inventory
+        MoveBar(inputFood * foodValue);
+    }
+
+    //No behavior for negative energy rn, but shouldn't be able to go negative
+    void MoveBar(float inputEnergy)
+    {
+        playerEnergy.AddEnergy(inputEnergy);
+    }
+    bool CheckCanSpend(int inputFood)
+    {
+        if (playerFood.currentFood - inputFood < 0)
         {
             Debug.Log("Failed because you are broke");
             return false;
         }
-        else if (spentWood + inputWood < 0)
+        else if (spentFood + inputFood < 0)
         {
-            Debug.Log("Failed because you can't take more wood out of the dam");
+            Debug.Log("Failed because you can't make negative food");
             return false;
         }
         else
@@ -72,33 +78,18 @@ public class RestManager : MonoBehaviour
 
     public void StartUp()
     {
-        minDam = damLevel;
-        spentWood = 0;
-        woodCounter.text = "0";
-        maxWood = woodHolder.currentWood;
-        UpdateWater(1, 4);
-    }
-
-    public void UpdateWater(int min, int max)
-    {
-        Debug.Log("Adding water");
-        int addedWater =Random.Range(min, max);
-        waterLevel += addedWater;
-        float levelChange = waterLevel * uIHeight / maxDam;
-        waterBounds.sizeDelta = new Vector2(waterBounds.sizeDelta.x, waterBaseHeight + levelChange);
-        waterBounds.transform.position += new Vector3(0f, addedWater * uIHeight / maxDam * 0.5f);
-        //waterBounds.sizeDelta = new Vector2(waterBounds.sizeDelta.x, 1000);
-
+        playerEnergy.SetEnergy(0);
+        spentFood = 0;
+        foodCounter.text = spentFood.ToString();
     }
     public void Confirm()
     {
-        damLevel += spentWood;
-        spentWood = 0;
-        CheckLevel();
+        spentFood = 0;
+        BeginDay();
     }
 
-    bool CheckLevel()
+    bool BeginDay()
     {
         return true;
-    }*/
+    }
 }

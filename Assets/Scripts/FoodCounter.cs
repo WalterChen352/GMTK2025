@@ -25,11 +25,9 @@ public class FoodCounter : MonoBehaviour
     }
     public bool AddFood(int v)
     {
-        currentFood += v;
-        foodCounter.text = currentFood.ToString();
         if (currentFood+ v >= 0)
         {
-            Debug.Log($"Adding wood: {v}");
+            Debug.Log($"Adding food: {v}");
             currentFood += v;
             foodCounter.text = currentFood.ToString();
             return true;

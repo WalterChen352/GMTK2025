@@ -11,7 +11,6 @@ public class DamManager : MonoBehaviour
     public float maxDam = 100f;
     private int spentWood;
     public int consumedWood = 0;
-    private float maxWood;
     private float waterBaseHeight;
     public WoodCounter woodHolder;
     [Tooltip("Defined area for min and max water/dam levels.")]
@@ -29,7 +28,6 @@ public class DamManager : MonoBehaviour
         minDam = damLevel;
         spentWood = 0;
         woodCounter.text = "0";
-        maxWood = woodHolder.currentWood;
         waterBaseHeight = waterBounds.rect.height;
         StartUp();
     }
@@ -82,8 +80,7 @@ public class DamManager : MonoBehaviour
     {
         minDam = damLevel;
         spentWood = 0;
-        woodCounter.text = "0";
-        maxWood = woodHolder.currentWood;
+        woodCounter.text = spentWood.ToString();
         UpdateWater(1, 4);
     }
 

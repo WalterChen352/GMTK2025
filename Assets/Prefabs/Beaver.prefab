@@ -197,7 +197,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4487586137129666903}
   - component: {fileID: 1607481373062612263}
-  - component: {fileID: 5110283079416670361}
   - component: {fileID: 4872991150675296140}
   m_Layer: 0
   m_Name: Main Camera
@@ -272,14 +271,6 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &5110283079416670361
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4606457269640196340}
-  m_Enabled: 1
 --- !u!114 &4872991150675296140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,6 +335,7 @@ GameObject:
   - component: {fileID: 8392690480618548540}
   - component: {fileID: 7587809379073496384}
   - component: {fileID: 7069849582531475420}
+  - component: {fileID: 4975746713842520241}
   m_Layer: 0
   m_Name: Beaver
   m_TagString: Untagged
@@ -732,3 +724,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!81 &4975746713842520241
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7872850988944628146}
+  m_Enabled: 1

@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class EnergySystem : MonoBehaviour
 {
     public Slider energySlider;
@@ -19,6 +19,7 @@ public class EnergySystem : MonoBehaviour
         if (currentEnergy <= 0)
         {
             Debug.Log("Run death behavior");
+            Death();
         }
         // Debug.Log($"Used {energyCost} to beaver for total of {currentEnergy}");
         energySlider.value = currentEnergy;
@@ -37,5 +38,9 @@ public class EnergySystem : MonoBehaviour
     }
 
     //Add loss state/condition here.
-
+    public void Death()
+    {
+        //Deathscreen
+        SceneManager.LoadScene(4);
+    }
     }

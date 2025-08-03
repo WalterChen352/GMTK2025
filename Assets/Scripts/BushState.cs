@@ -20,10 +20,12 @@ public class BushState : MonoBehaviour, IInteractable
     private void Awake()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        Initialize(4);
     }
 
     public void Start()
     {
+        IsInteractable = true;
         beaver = GameObject.Find("Beaver");
         foodCounter = beaver.GetComponent<FoodCounter>();
         outline = GetComponentInChildren<Outline>();
@@ -33,10 +35,13 @@ public class BushState : MonoBehaviour, IInteractable
 
     public void Highlight(bool on)
     {
+        Debug.Log( $"{IsInteractable} that I am interactable");
         if (on && IsInteractable)
         {
             outline.enabled = true;
-        } else {
+        }
+        else
+        {
             outline.enabled = false;
         }
     }
@@ -57,11 +62,13 @@ public class BushState : MonoBehaviour, IInteractable
     private void CollectBerries()
     {
         IsInteractable = false;
+        Highlight(false);
         foodCounter.AddFood(BerryCount);
     }
     public void Initialize(int berryCount)
     {
         Debug.Log($"Bush initialized with {berryCount} berries.");
+        IsInteractable = true;
         BerryCount = berryCount;
         if (BerryCount >= plentifulThreshold)
         {

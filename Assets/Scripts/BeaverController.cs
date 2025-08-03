@@ -124,7 +124,10 @@ public class BeaverController : MonoBehaviour
 
     public void OnPause(InputAction.CallbackContext context)
     {
-        PauseMenu.GetInstance().Pause();
+        if (context.started)
+        {
+            PauseMenu.GetInstance().Pause();
+        }
     }
 
     public void Update()

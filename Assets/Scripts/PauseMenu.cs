@@ -14,19 +14,28 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] AudioMixerGroup sfxGroup;
     [SerializeField] AudioMixerGroup uiGroup;
 
+    private AudioSource audioSource;
+
     public static PauseMenu GetInstance()
     {
         return instance;
     }
 
+    public void PlayUISound()
+    {
+        audioSource.Play();
+    }
+
     public void Pause()
     {
+        PlayUISound();
         Time.timeScale = 0f;
         canvas.enabled = true;
     }
 
     public void Unpause()
     {
+        PlayUISound();
         Time.timeScale = 1f;
         canvas.enabled = false;
     }
@@ -53,6 +62,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Quit()
     {
+        PlayUISound();
         Application.Quit();
     }
 
@@ -69,6 +79,7 @@ public class PauseMenu : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         canvas = GetComponent<Canvas>();
         canvas.enabled = false;
     }

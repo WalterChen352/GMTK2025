@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3749649382520895542}
   - component: {fileID: -4559166831495402896}
   - component: {fileID: 4359103021855036968}
+  - component: {fileID: 7784124341461360762}
   m_Layer: 0
   m_Name: BigTree
   m_TagString: Untagged
@@ -68,7 +69,7 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 0
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 7d02e8c4da223b84b913a77ba4bb78bf, type: 2}
@@ -108,14 +109,14 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.2881927
   m_Height: 3.6644502
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -1.35, z: -0.34}
 --- !u!54 &4169258946774165748
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -287,6 +288,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &7784124341461360762
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45203885589525439}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &710528064185762437
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +324,7 @@ GameObject:
   - component: {fileID: 8724559530273964398}
   - component: {fileID: 2245054724541741768}
   - component: {fileID: 2761254929077324402}
+  - component: {fileID: 3025589689394020808}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -384,7 +409,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710528064185762437}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7a9dba303e45d14d95d010431263091, type: 3}
   m_Name: 
@@ -416,6 +441,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Offset: 0
+--- !u!136 &3025589689394020808
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710528064185762437}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 16.792494
+  m_Direction: 1
+  m_Center: {x: 0, y: -5.577729, z: -0.00000011920929}
 --- !u!1 &8804938812479776595
 GameObject:
   m_ObjectHideFlags: 0

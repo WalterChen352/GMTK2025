@@ -7,7 +7,7 @@ public class BeaverController : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private StandardInputs input;
-    [SerializeField] private SphereCollider interactionZone;
+    [SerializeField] private BoxCollider interactionZone;
 
     [SerializeField] Transform cam;
 

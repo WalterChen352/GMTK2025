@@ -20,7 +20,7 @@ public class DamManager : MonoBehaviour
     [SerializeField] private RectTransform waterBounds;
     [SerializeField] private TextMeshProUGUI woodCounter;
 
-    public float uIHeight;
+    private float uIHeight;
 
     void Start()
     {
@@ -88,15 +88,11 @@ public class DamManager : MonoBehaviour
     public void UpdateWater(int min, int max)
     {
         Debug.Log("Adding water");
-        int addedWater = Random.Range(min, max);
+        int addedWater =Random.Range(min, max);
         waterLevel += addedWater;
-        float levelChange = (waterLevel - maxDam) * maxDam / uIHeight;
-        Debug.Log("THing:" + levelChange);
-        waterBounds.offsetMax = new Vector2(waterBounds.offsetMax.x, -1*(levelChange + 800));
-        //ChangeRectTransform = ResoursesTipsNewPannel.GetComponent<RectTransform>();
-        //ChangeRectTransform.offsetMax = new Vector2(ChangeRectTransform.offsetMax.x, ChangeRectTransform.offsetMax.y+20);
-        //waterBounds.sizeDelta = new Vector2(waterBounds.sizeDelta.x, waterBaseHeight + levelChange);
-        //waterBounds.transform.position += new Vector3(0f, addedWater * uIHeight / maxDam * 0.5f);
+        float levelChange = waterLevel * uIHeight / maxDam;
+        waterBounds.sizeDelta = new Vector2(waterBounds.sizeDelta.x, waterBaseHeight + levelChange);
+        waterBounds.transform.position += new Vector3(0f, addedWater * uIHeight / maxDam * 0.5f);
         //waterBounds.sizeDelta = new Vector2(waterBounds.sizeDelta.x, 1000);
 
     }

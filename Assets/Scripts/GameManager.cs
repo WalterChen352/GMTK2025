@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    // DELETE
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))

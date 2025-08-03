@@ -16,6 +16,10 @@ public class EnergySystem : MonoBehaviour
     public void UseEnergy(float energyCost)
     {
         currentEnergy -= energyCost;
+        if (currentEnergy <= 0)
+        {
+            Debug.Log("Run death behavior");
+        }
         // Debug.Log($"Used {energyCost} to beaver for total of {currentEnergy}");
         energySlider.value = currentEnergy;
 
@@ -31,5 +35,7 @@ public class EnergySystem : MonoBehaviour
     {
         return currentEnergy;
     }
+
+    //Add loss state/condition here.
 
     }

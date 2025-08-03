@@ -9,6 +9,8 @@ public class BushState : MonoBehaviour, IInteractable
     public GameObject beaver;
     public Outline outline;
     public bool IsInteractable { get; set; }
+    public int nextRipe = -2;
+    public int curDay = 0;
 
     [SerializeField] Sprite plentifulSprite;
     [SerializeField] Sprite someSprite;
@@ -21,6 +23,20 @@ public class BushState : MonoBehaviour, IInteractable
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         Initialize(4);
+    }
+
+    //Gets the day from the game manager
+    public void GetDay(Component sender, object data)
+    {
+        if (data is int)
+        {
+            Debug.Log("Bushes heard day event");
+            curDay = (int)data;
+            if (curDay == nextRipe)
+            {
+                Initialize(4);
+            }
+        }
     }
 
     public void Start()
@@ -55,6 +71,7 @@ public class BushState : MonoBehaviour, IInteractable
             CollectBerries();
 
             Debug.Log($"Berry gave {BerryCount} berries to the beaver");
+            nextRipe = curDay + Random.Range(2, 5);
             BerryCount = 0;
         }
 

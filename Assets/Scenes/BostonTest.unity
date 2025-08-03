@@ -149,6 +149,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 916719823505203525, guid: 0d9d74b652eb77a4b9761905802bf006, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 903835629}
     - target: {fileID: 1672125653534266037, guid: 0d9d74b652eb77a4b9761905802bf006, type: 3}
       propertyPath: energySlider
       value: 
@@ -878,6 +882,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb98a6d52754efd4496e940d5c331d22, type: 3}
+--- !u!114 &903835629 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2688647515583618414, guid: bb98a6d52754efd4496e940d5c331d22, type: 3}
+  m_PrefabInstance: {fileID: 903835628}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6df7b3c8508fc4aad72be700c32228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1033655213 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7190527550143091081, guid: b72409884a14c1d498a483407d3ecb58, type: 3}

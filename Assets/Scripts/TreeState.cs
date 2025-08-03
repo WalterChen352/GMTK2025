@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 public class TreeState : MonoBehaviour, IInteractable
 {
-    public int Hitpoints;
+    public float Startinghitpoints = 4;
+    public float Hitpoints;
     public WoodCounter woodCounter;
     public GameObject beaver;
     [SerializeField] List<Sprite> Sprites = new List<Sprite>();
@@ -22,6 +23,7 @@ public class TreeState : MonoBehaviour, IInteractable
 
     void Start()
     {
+        Hitpoints = Startinghitpoints;
         beaver = GameObject.Find("Beaver");
         woodCounter = beaver.GetComponent<WoodCounter>();
         outline = GetComponent<Outline>();
@@ -30,21 +32,25 @@ public class TreeState : MonoBehaviour, IInteractable
         IsInteractable = true;
         outline.enabled = false;
         //
-        //Sprite = GetComponentInChildren<SpriteRenderer>();
-        if (trunk != null)
+        Sprite = GetComponentInChildren<SpriteRenderer>();
+        if(Sprite == null)
         {
-            TrunkRB = trunk.GetComponent<Rigidbody>();
-            if (TrunkRB != null)
-            {
-                TrunkRB.isKinematic = true;
-                TrunkRB.useGravity = false;
-            }
+            Debug.LogError("child sprite not found");
         }
+        //if (trunk != null)
+        //{
+        //    TrunkRB = trunk.GetComponent<Rigidbody>();
+        //    if (TrunkRB != null)
+        //    {
+        //        TrunkRB.isKinematic = true;
+        //        TrunkRB.useGravity = false;
+        //    }
+        //}
 
-        // Ensure full tree is active and parts are disabled initially
-        if (fullTree != null) fullTree.SetActive(true);
-        if (trunk != null) trunk.SetActive(false);
-        if (stump != null) stump.SetActive(false);
+        //// Ensure full tree is active and parts are disabled initially
+        //if (fullTree != null) fullTree.SetActive(true);
+        //if (trunk != null) trunk.SetActive(false);
+        //if (stump != null) stump.SetActive(false);
 
     }
 
@@ -81,8 +87,22 @@ public class TreeState : MonoBehaviour, IInteractable
             Hitpoints -= 1;
         }
 
-        if (Hitpoints == 0)
+        if (Hitpoints <=2 && Hitpoints> 1)
         {
+            Debug.Log("Partly Chopped");
+            Sprite.sprite = Sprites[0];
+        }
+
+        if (Hitpoints <=1 && Hitpoints > 0)
+        {
+            Debug.Log("Mostly Chopped");
+            Sprite.sprite = Sprites[1];
+        }
+
+        if (Hitpoints <= 0)
+        {
+            Debug.Log("Stumped");
+            Sprite.sprite = Sprites[2];
             TreeFall();
             CollectWood();
 

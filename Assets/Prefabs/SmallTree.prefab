@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3749649382520895542}
   - component: {fileID: -4559166831495402896}
   m_Layer: 0
-  m_Name: BigTree
+  m_Name: SmallTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,9 +158,9 @@ MonoBehaviour:
   woodCounter: {fileID: 0}
   beaver: {fileID: 0}
   Sprites:
-  - {fileID: -3781475741486958892, guid: 5e12a6fb9d657ad4fb5e80a2bf1de15e, type: 3}
-  - {fileID: -6296702048476635984, guid: 42207485b3ea19d40838816a0f594847, type: 3}
-  - {fileID: -5918569282521756918, guid: 125406174530acc4d80d20e01060e9a7, type: 3}
+  - {fileID: 542100483027788787, guid: 68cb30874e6fda24faa6848402fe4110, type: 3}
+  - {fileID: -8159887303538597423, guid: f7283e14f7903b647a0e9a557b9db647, type: 3}
+  - {fileID: -2617174026175770869, guid: e3ea8259f7adc02439146e2870046267, type: 3}
   Sprite: {fileID: 0}
   outline: {fileID: 0}
   Health: 0
@@ -217,7 +217,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 0.17739771, y: 0.17739771, z: 1}
+  m_LocalScale: {x: 0.1959248, y: 0.1959248, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7687891009839164707}
@@ -266,7 +266,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5856805514285712502, guid: 4b1e4258397928149a869c61e1d05754, type: 3}
+  m_Sprite: {fileID: 6293828795476309382, guid: 1f5ef83d151680f4a8786842dde49eaa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

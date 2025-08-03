@@ -589,6 +589,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigTree
       objectReference: {fileID: 0}
+    - target: {fileID: 45203885589525439, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3749649382520895542, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
       propertyPath: stump
       value: 
@@ -930,8 +934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e31ed676e9f2b85438822d6be50c287c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 45203885589525439, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+  PrefabsDecor: []
   SpawnArea: {x: 50, y: 50}
   ScaleRange: {x: 0.8, y: 1.2}
   StartingPoint: {x: 0, y: 0}
@@ -1134,7 +1137,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &812622646
@@ -1176,13 +1179,77 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigTree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 689163457514562590, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: m_Size.x
+      value: 14.092629
+      objectReference: {fileID: 0}
+    - target: {fileID: 689163457514562590, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: m_Size.y
+      value: 28.630003
+      objectReference: {fileID: 0}
+    - target: {fileID: 689163457514562590, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5856805514285712502, guid: 4b1e4258397928149a869c61e1d05754, type: 3}
+    - target: {fileID: 689163457514562590, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607232185417832197, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.17739771
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607232185417832197, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.17739771
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607232185417832197, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749649382520895542, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: Sprites.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749649382520895542, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: 'Sprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: -3781475741486958892, guid: 5e12a6fb9d657ad4fb5e80a2bf1de15e, type: 3}
+    - target: {fileID: 3749649382520895542, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: 'Sprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6296702048476635984, guid: 42207485b3ea19d40838816a0f594847, type: 3}
+    - target: {fileID: 3749649382520895542, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: 'Sprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -5918569282521756918, guid: 125406174530acc4d80d20e01060e9a7, type: 3}
+    - target: {fileID: 3986841954645081003, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: m_Height
+      value: 3.6644502
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986841954645081003, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: m_Radius
+      value: 1.2881927
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986841954645081003, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986841954645081003, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986841954645081003, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7687891009839164707, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.174017
       objectReference: {fileID: 0}
     - target: {fileID: 7687891009839164707, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0000019073486
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7687891009839164707, guid: 8ac64817e50514443b4f7d40cd9911d7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1543,7 +1610,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1209300535

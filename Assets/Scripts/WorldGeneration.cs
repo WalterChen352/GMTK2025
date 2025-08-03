@@ -44,7 +44,7 @@ public class WorldGeneration: MonoBehaviour
             //spawn pos: Vector3, position to put
             //
             GameObject obj = Instantiate(prefab, spawnPos, Quaternion.identity);
-            if (Random.Range(0,1) == 0)
+            if (Random.Range(0,2) == 0)
             {
                 obj.GetComponentInChildren<SpriteRenderer>().flipX = true;
             }

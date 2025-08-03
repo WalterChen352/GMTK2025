@@ -108,13 +108,15 @@ public class TreeState : MonoBehaviour, IInteractable
     public void TreeFall()
     {
         bool fallRight = beaver.transform.position.x >= this.transform.position.x ;
+        GameObject trunkCopy;
         Vector3 pos = transform.position;
         if (fallRight)
         {
             pos.z += 1;
             pos.x += (float).25;
             pos.y += (float)0.25;
-            var trunkCopy = Instantiate(trunk, pos, Quaternion.identity);
+            trunkCopy = Instantiate(trunk, pos, Quaternion.identity);
+            
             Rigidbody rb = trunkCopy.GetComponent<Rigidbody>();
             rb.AddTorque(new Vector3(0, 0, 1000), ForceMode.Impulse);
         }
@@ -123,11 +125,21 @@ public class TreeState : MonoBehaviour, IInteractable
             pos.z += (float)0.75;
             pos.x += (float).25;
             //pos.y += (float)0.25;
-            var trunkCopy = Instantiate(trunk, pos, Quaternion.identity);
+            trunkCopy = Instantiate(trunk, pos, Quaternion.identity);
             Rigidbody rb = trunkCopy.GetComponent<Rigidbody>();
             rb.AddTorque(new Vector3(0, 0, -1000), ForceMode.Impulse);
         }
-        
+
+        if (trunk.GetComponentInChildren<SpriteRenderer>().flipX)
+        {
+            trunkCopy.GetComponentInChildren<SpriteRenderer>().flipX = false;
+        }
+        else
+        {
+            trunkCopy.GetComponentInChildren<SpriteRenderer>().flipX = true;
+        }
+
+        trunkCopy.transform.localScale=this.transform.localScale;
 
         IsInteractable = false;
         outline.enabled = false;

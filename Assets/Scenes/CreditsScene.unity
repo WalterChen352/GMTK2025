@@ -1528,61 +1528,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue ipsum,
-    luctus vitae eros sed, scelerisque ultricies augue. Aliquam id lorem volutpat,
-    malesuada nulla eu, lacinia tellus. Morbi ornare tortor dui, vel porttitor metus
-    bibendum ac. Nunc at ex vitae tellus rhoncus sagittis. Mauris elementum ut risus
-    eu bibendum. Nunc congue, tellus quis pretium vestibulum, ex purus lobortis nibh,
-    a dignissim ante justo vel nisi. Nullam sit amet placerat orci. Vestibulum ante
-    ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-
-
-
-    Nunc
-    ut leo at libero elementum vulputate nec sit amet risus. Nam ut mi eget mi fermentum
-    dignissim. Mauris at tortor lorem. Quisque viverra elit at gravida malesuada.
-    Aliquam non euismod mi. Aliquam dignissim sollicitudin lorem, nec posuere orci
-    faucibus vitae. Mauris auctor, nunc at pulvinar fringilla, quam sapien vehicula
-    nulla, in vestibulum lectus ante vel elit. Donec ac condimentum est, vel varius
-    lectus. Nulla facilisi. Cras nec magna dolor. Nulla at enim libero. Donec eget
-    tellus ut lorem rutrum porttitor. Proin in erat risus.
-
-
-
-    Suspendisse vitae
-    ante consectetur, molestie risus sed, accumsan turpis. Proin egestas interdum
-    varius. Proin enim justo, porta eu cursus nec, condimentum sit amet lectus. Sed
-    ut malesuada orci. Aliquam nec arcu accumsan, porttitor nisl eu, malesuada nisi.
-    Integer tristique vulputate scelerisque. Proin scelerisque mauris at metus mollis,
-    nec vestibulum lorem hendrerit. Aenean dui massa, pellentesque et enim eu, porta
-    maximus mi. Ut quam eros, ultrices ut dolor et, sagittis aliquam nunc. Nunc sit
-    amet gravida arcu. Nulla vel felis eget magna porttitor consequat. Quisque vel
-    ultricies nibh. Nam turpis lorem, gravida nec consequat at, faucibus sed nunc.
-    Ut faucibus sapien nec massa sagittis malesuada.
-
-
-
-    Vivamus ac congue urna.
-    Vestibulum ullamcorper risus in elit sagittis molestie. Curabitur nec eleifend
-    tellus. Proin congue, leo non pulvinar facilisis, velit sapien elementum metus,
-    eget porta turpis nisi vel augue. Proin sodales aliquet elit. Nulla eget laoreet
-    ex. Phasellus vehicula, purus eget facilisis vehicula, velit dui euismod lacus,
-    vitae consequat purus arcu eu diam. Cras in purus vitae ante vulputate tristique.
-    Sed sit amet diam fringilla, rutrum tellus eget, vehicula quam. Interdum et malesuada
-    fames ac ante ipsum primis in faucibus. Quisque suscipit tristique quam, dapibus
-    ultrices diam fermentum a. Vestibulum gravida nibh convallis elit rutrum facilisis.
-
-
-
-    Lorem
-    ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in tincidunt massa.
-    Vivamus eleifend lorem vitae est tristique tincidunt sed ac eros. Integer ultricies
-    gravida mi in malesuada. Duis eu est non turpis sodales egestas a commodo dui.
-    Sed interdum lorem ex, id imperdiet nisl vehicula volutpat. Nulla facilisi. Cras
-    fermentum, eros et convallis fermentum, est nibh congue ante, non dignissim metus
-    lacus eu arcu. Maecenas tristique justo et ornare varius. Fusce egestas erat
-    placerat mattis lobortis. Proin eu enim in metus placerat ultrices in id libero.
-    Praesent at ex hendrerit, scelerisque tellus id, auctor tellus.'
+  m_text: "Free Assets used:\n\"Sergio's Magic Dustbin \" Kevin MacLeod (incompetech.com)\r\nLicensed
+    under Creative Commons: By Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\n\"Suonatore
+    di Liuto\" Kevin MacLeod (incompetech.com)\r\nLicensed under Creative Commons:
+    By Attribution 4.0 License\r\nhttp://creativecommons.org/licenses/by/4.0/\r\n\r\"sound1\"
+    by user1 ( http://freesound.org/s/soundID/ ) licensed under CCBYNC 4.0\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1744,7 +1694,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1533554947}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.27533317
+  m_Size: 0.39533317
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

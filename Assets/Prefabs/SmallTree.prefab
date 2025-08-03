@@ -154,8 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e20ed31d136254048b16bb36005c3a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Startinghitpoints: 4
-  Hitpoints: 0
+  Hitpoints: 4
   woodCounter: {fileID: 0}
   beaver: {fileID: 0}
   Sprites:
@@ -168,6 +167,11 @@ MonoBehaviour:
   TrunkRB: {fileID: 0}
   Push: 50
   trunk: {fileID: 5206884871767308743, guid: 6b05a3b90cf57894f8e42c04d8569a92, type: 3}
+  minDamage: 1.01
+  maxDamage: 0.01
+  baseEnergyCost: 10
+  timesEaten: 0
+  costFactor: 1.2
 --- !u!114 &-4559166831495402896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
+  outlineWidth: 0.41
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []

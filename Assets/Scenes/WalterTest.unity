@@ -1377,21 +1377,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3811607726902041742, guid: c23fae5969c317a4faabe981175bd866, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1773977
-      objectReference: {fileID: 0}
-    - target: {fileID: 3811607726902041742, guid: c23fae5969c317a4faabe981175bd866, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1773977
-      objectReference: {fileID: 0}
     - target: {fileID: 5206884871767308743, guid: c23fae5969c317a4faabe981175bd866, type: 3}
       propertyPath: m_Name
       value: BigTrunk
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548913283293511364, guid: c23fae5969c317a4faabe981175bd866, type: 3}
-      propertyPath: m_Mass
-      value: 7000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

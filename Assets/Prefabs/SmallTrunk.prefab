@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6085596352252008703}
   - component: {fileID: 7548913283293511364}
   - component: {fileID: 994639504237948748}
+  - component: {fileID: 3467873993996999117}
+  - component: {fileID: 7758161286623722440}
   m_Layer: 0
   m_Name: SmallTrunk
   m_TagString: Untagged
@@ -151,6 +153,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Offset: 0
+--- !u!114 &3467873993996999117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5206884871767308743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82c5f0e41aa245241994b06e51a92b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outline: {fileID: 7758161286623722440}
+  WoodCount: 0
+--- !u!114 &7758161286623722440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5206884871767308743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0.3
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &6188484937638900512
 GameObject:
   m_ObjectHideFlags: 0

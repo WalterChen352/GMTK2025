@@ -26,7 +26,7 @@ public class BeaverController : MonoBehaviour
 
     private Vector3 move;
     private bool isMoving = false;
-    private readonly List<IInteractable> nearbyInteractables = new();
+    public IInteractable interactable;
     private Vector2 moveInput;
     private Rigidbody rb;
     private SpriteRenderer spriteRenderer;
@@ -119,13 +119,15 @@ public class BeaverController : MonoBehaviour
     {
         if (gameManager.gameState == gameStates.Active)
         {
-            if (context.started)
+            if (context.started && interactable!= null && interactable.IsInteractable)
             {
-                Debug.Log("Beaver interacting!");
-                if (nearbyInteractables.Count > 0)
+                interactable.Interact();
+                if (!interactable.IsInteractable)
                 {
-                    nearbyInteractables[0].Interact();
+                    interactable = null;
                 }
+                Debug.Log("Beaver interacting!");
+                
             }
         }
     }
@@ -155,22 +157,22 @@ public class BeaverController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Entering collision");
-        if (other.TryGetComponent<IInteractable>(out var interactable))
+        if (other.TryGetComponent<IInteractable>(out var i)&& i.IsInteractable)
         {
-            interactable.Highlight(true);
-            nearbyInteractables.Add(interactable);
-            Debug.Log($"Adding interactable. Interactables count is now {nearbyInteractables.Count}");
+            i.Highlight(true);
+            interactable = i;
+            
+            Debug.Log($"Adding interactable. Interactables count is now one");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("Leaving collision");
-        if (other.TryGetComponent<IInteractable>(out var interactable))
+        if (other.TryGetComponent<IInteractable>(out var i) && i == interactable)
         {
             interactable.Highlight(false);
-            nearbyInteractables.Remove(interactable);
-            Debug.Log($"Removing interactable. Interactables count is now {nearbyInteractables.Count}");
+            interactable = null;
         }
     }
     Vector3 calcDirRelToCam(Transform transform, Vector3 moveInput)

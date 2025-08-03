@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 public class TreeState : MonoBehaviour, IInteractable
 {
@@ -23,7 +24,10 @@ public class TreeState : MonoBehaviour, IInteractable
     public int timesEaten = 0;
     public float costFactor=(float) 1.2;
     private float damage;
-    
+
+    AudioSource audioSource3D;
+    AudioSource audioSource2D;
+
 
     void Start()
     {
@@ -55,7 +59,9 @@ public class TreeState : MonoBehaviour, IInteractable
         //if (fullTree != null) fullTree.SetActive(true);
         //if (trunk != null) trunk.SetActive(false);
         //if (stump != null) stump.SetActive(false);
-
+        
+        audioSource3D = GetComponent<AudioSource>();
+        audioSource2D = GetComponentsInChildren<AudioSource>().Where(source => source != audioSource3D).Last();
     }
 
 
@@ -66,6 +72,7 @@ public class TreeState : MonoBehaviour, IInteractable
         Debug.Log($"Tree hp before is {Hitpoints}");
         if (IsInteractable == true)
         {
+            audioSource2D.Play();
             float energyCost = (float)(baseEnergyCost*  Math.Pow(costFactor, timesEaten));
             timesEaten++;
             var EnergySystem = beaver.GetComponent<EnergySystem>();
@@ -124,6 +131,7 @@ public class TreeState : MonoBehaviour, IInteractable
     }
     public void TreeFall()
     {
+        audioSource3D.Play();
         bool fallRight = beaver.transform.position.x >= this.transform.position.x ;
         GameObject trunkCopy;
         Vector3 pos = transform.position;

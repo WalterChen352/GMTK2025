@@ -1,26 +1,24 @@
 using UnityEngine;
 
-public class TreeBillboard : MonoBehaviour
+public class Billboard : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     Transform cam;
     public float Offset;
-    void Start()
-    {
-    }
 
     private void Awake()
     {
         cam = Camera.main.transform;
     }
 
-    // Update is called once per frame
     void LateUpdate()
     {
-        Vector3 CamForward = cam.forward;
-        //CamForward.y = 0;
-        transform.forward = CamForward;
-        // cam.y = 0;
-        // transform.LookAt(cam);
+        // Make the sprite face the camera while maintaining the camera's up direction
+        transform.rotation = Quaternion.LookRotation(
+            transform.position - cam.position,
+            cam.up
+        );
+
+        // Optional: Apply any offset you might want
+        transform.rotation *= Quaternion.Euler(0, Offset, 0);
     }
 }

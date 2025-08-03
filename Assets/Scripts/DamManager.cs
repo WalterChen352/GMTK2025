@@ -7,7 +7,6 @@ public class DamManager : MonoBehaviour
 {
     public float waterLevel = 0f;
     public float damLevel = 5f;
-    private float minDam;
     public float maxDam = 100f;
     private int spentWood;
     public int consumedWood = 0;
@@ -26,12 +25,11 @@ public class DamManager : MonoBehaviour
     void Start()
     {
         uIHeight = damUIBounds.sizeDelta.y;
-        minDam = damLevel;
-        spentWood = 0;
-        woodCounter.text = "0";
         maxWood = woodHolder.currentWood;
         waterBaseHeight = waterBounds.rect.height;
-        StartUp();
+        float relativeDist = damLevel * uIHeight / maxDam;
+        MoveBar(relativeDist);
+        //StartUp();
     }
 
     void MoveBar(float relDist)
@@ -80,7 +78,7 @@ public class DamManager : MonoBehaviour
 
     public void StartUp()
     {
-        minDam = damLevel;
+        Debug.Log("Running Dam Startup");
         spentWood = 0;
         woodCounter.text = "0";
         maxWood = woodHolder.currentWood;

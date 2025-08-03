@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 2206302871512297557}
   - component: {fileID: 5023151252310063210}
   - component: {fileID: 1255701788603317792}
+  - component: {fileID: 6730807454398929676}
   m_Layer: 0
   m_Name: Bush
   m_TagString: Untagged
@@ -151,8 +152,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.01058, y: 2.49479, z: -3.01581}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7999902885232671914}
   m_Father: {fileID: 0}
@@ -229,8 +230,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.97
+  m_Center: {x: 0, y: 0.97, z: 0}
 --- !u!54 &2206302871512297557
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -274,6 +275,8 @@ MonoBehaviour:
   BerryCount: 2
   beaver: {fileID: 0}
   outline: {fileID: 0}
+  nextRipe: -2
+  curDay: 0
   plentifulSprite: {fileID: 21300000, guid: 147b2c4dfc4edec48863ec285f13f7c0, type: 3}
   someSprite: {fileID: 21300000, guid: 16f1495e6a07b124693ffd1a79d58634, type: 3}
   emptySprite: {fileID: 21300000, guid: 87f0777e18e231945b72447f2979d5b2, type: 3}
@@ -374,3 +377,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6730807454398929676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3449100407489101495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec920399729eb274188d0131b2c880ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: eea5d90dc305b2e478659970a38355f8, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5023151252310063210}
+        m_TargetAssemblyTypeName: BushState, Assembly-CSharp
+        m_MethodName: GetDay
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

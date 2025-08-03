@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4169258946774165748}
   - component: {fileID: 3749649382520895542}
   - component: {fileID: -4559166831495402896}
+  - component: {fileID: 6388684398212141430}
   m_Layer: 0
   m_Name: SmallTree
   m_TagString: Untagged
@@ -53,7 +54,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45203885589525439}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -110,10 +111,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.2881927
+  m_Radius: 1
   m_Height: 3.6644502
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!54 &4169258946774165748
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -166,9 +167,7 @@ MonoBehaviour:
   Health: 0
   TrunkRB: {fileID: 0}
   Push: 50
-  fullTree: {fileID: 0}
-  trunk: {fileID: 0}
-  stump: {fileID: 0}
+  trunk: {fileID: 5206884871767308743, guid: 6b05a3b90cf57894f8e42c04d8569a92, type: 3}
 --- !u!114 &-4559166831495402896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +186,27 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!65 &6388684398212141430
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45203885589525439}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &710528064185762437
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +236,7 @@ Transform:
   m_GameObject: {fileID: 710528064185762437}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0.2, y: 1, z: 0}
   m_LocalScale: {x: 0.1959248, y: 0.1959248, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -298,7 +318,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710528064185762437}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13ef4d15b4814b34e878ab391fc72426, type: 3}
   m_Name: 
@@ -310,7 +330,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710528064185762437}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13419f60314e4734682301d98ed01766, type: 3}
   m_Name: 

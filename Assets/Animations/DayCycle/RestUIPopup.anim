@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DamUIPopup
+  m_Name: RestUIPopup
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -43,7 +43,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.x
-    path: DamUI/RightSide
+    path: RestupUI/RightSide
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -73,7 +73,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: DamUI/RightSide
+    path: RestupUI/RightSide
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -83,15 +83,33 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
+        value: -1500
+        inSlope: 2618.3813
+        outSlope: 2618.3813
+        tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.33333334
+        outWeight: 0.18098667
       - serializedVersion: 3
-        time: 0.5
+        time: 0.6333333
+        value: -19.045074
+        inSlope: -2096.4216
+        outSlope: -2096.4216
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.68333334
+        value: 22.464512
+        inSlope: 831.7538
+        outSlope: 831.7538
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.71666664
         value: 0
         inSlope: 0
         outSlope: 0
@@ -103,46 +121,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.x
-    path: DamUI/BottomBlock
-    classID: 224
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -300
-        inSlope: 1185.3484
-        outSlope: 1185.3484
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.062113572
-      - serializedVersion: 3
-        time: 0.4
-        value: 15.176226
-        inSlope: -457.1457
-        outSlope: -457.1457
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.7479674
-      - serializedVersion: 3
-        time: 0.5
-        value: 0
-        inSlope: 4.1170936
-        outSlope: 4.1170936
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 1
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: DamUI/BottomBlock
+    path: RestupUI/LeftBlock
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -169,6 +148,15 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+        time: 0.6666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 0.71666664
         value: 0
         inSlope: 0
@@ -180,56 +168,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
-    path: DamUI/TopBlock
-    classID: 224
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1000
-        inSlope: -13.424301
-        outSlope: -13.424301
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.88788253
-      - serializedVersion: 3
-        time: 0.45
-        value: 17.973822
-        inSlope: -2696.4075
-        outSlope: -2696.4075
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.08544844
-        outWeight: 1
-      - serializedVersion: 3
-        time: 0.65
-        value: 27.576736
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.71666664
-        value: 0
-        inSlope: -5.519026
-        outSlope: -5.519026
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.5025581
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: DamUI/TopBlock
+    path: RestupUI/LeftBlock
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -242,7 +182,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 4022442761
+      path: 4286871603
       attribute: 1460864421
       script: {fileID: 0}
       typeID: 224
@@ -251,34 +191,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1532788630
-      attribute: 538195251
-      script: {fileID: 0}
-      typeID: 224
-      customType: 28
-      isPPtrCurve: 0
-      isIntCurve: 0
-      isSerializeReferenceCurve: 0
-    - serializedVersion: 2
-      path: 4184931492
-      attribute: 538195251
-      script: {fileID: 0}
-      typeID: 224
-      customType: 28
-      isPPtrCurve: 0
-      isIntCurve: 0
-      isSerializeReferenceCurve: 0
-    - serializedVersion: 2
-      path: 4022442761
-      attribute: 538195251
-      script: {fileID: 0}
-      typeID: 224
-      customType: 28
-      isPPtrCurve: 0
-      isIntCurve: 0
-      isSerializeReferenceCurve: 0
-    - serializedVersion: 2
-      path: 1532788630
+      path: 873946984
       attribute: 1460864421
       script: {fileID: 0}
       typeID: 224
@@ -287,8 +200,17 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 4184931492
-      attribute: 1460864421
+      path: 4286871603
+      attribute: 538195251
+      script: {fileID: 0}
+      typeID: 224
+      customType: 28
+      isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 873946984
+      attribute: 538195251
       script: {fileID: 0}
       typeID: 224
       customType: 28
@@ -306,7 +228,7 @@ AnimationClip:
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
@@ -343,7 +265,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.x
-    path: DamUI/RightSide
+    path: RestupUI/RightSide
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -373,7 +295,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: DamUI/RightSide
+    path: RestupUI/RightSide
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -383,15 +305,33 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
+        value: -1500
+        inSlope: 2618.3813
+        outSlope: 2618.3813
+        tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.33333334
+        outWeight: 0.18098667
       - serializedVersion: 3
-        time: 0.5
+        time: 0.6333333
+        value: -19.045074
+        inSlope: -2096.4216
+        outSlope: -2096.4216
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.68333334
+        value: 22.464512
+        inSlope: 831.7538
+        outSlope: 831.7538
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 1
+      - serializedVersion: 3
+        time: 0.71666664
         value: 0
         inSlope: 0
         outSlope: 0
@@ -403,46 +343,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.x
-    path: DamUI/BottomBlock
-    classID: 224
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: -300
-        inSlope: 1185.3484
-        outSlope: 1185.3484
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.062113572
-      - serializedVersion: 3
-        time: 0.4
-        value: 15.176226
-        inSlope: -457.1457
-        outSlope: -457.1457
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.7479674
-      - serializedVersion: 3
-        time: 0.5
-        value: 0
-        inSlope: 4.1170936
-        outSlope: 4.1170936
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 1
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.y
-    path: DamUI/BottomBlock
+    path: RestupUI/LeftBlock
     classID: 224
     script: {fileID: 0}
     flags: 0
@@ -469,6 +370,15 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+        time: 0.6666667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
         time: 0.71666664
         value: 0
         inSlope: 0
@@ -480,56 +390,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
-    path: DamUI/TopBlock
-    classID: 224
-    script: {fileID: 0}
-    flags: 0
-  - serializedVersion: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1000
-        inSlope: -13.424301
-        outSlope: -13.424301
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.88788253
-      - serializedVersion: 3
-        time: 0.45
-        value: 17.973822
-        inSlope: -2696.4075
-        outSlope: -2696.4075
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.08544844
-        outWeight: 1
-      - serializedVersion: 3
-        time: 0.65
-        value: 27.576736
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.71666664
-        value: 0
-        inSlope: -5.519026
-        outSlope: -5.519026
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.5025581
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: DamUI/TopBlock
+    path: RestupUI/LeftBlock
     classID: 224
     script: {fileID: 0}
     flags: 0

@@ -44,6 +44,12 @@ public class WorldGeneration: MonoBehaviour
             //spawn pos: Vector3, position to put
             //
             GameObject obj = Instantiate(prefab, spawnPos, Quaternion.identity);
+            if (Random.Range(0,2) == 0)
+            {
+                obj.GetComponentInChildren<SpriteRenderer>().flipX = true;
+            }
+            
+            
             if (prefab.name == "Bush")
             {
                 BushState bushState = obj.GetComponent<BushState>();
@@ -54,7 +60,7 @@ public class WorldGeneration: MonoBehaviour
             }
 
             float scale = Random.Range(ScaleRange.x, ScaleRange.y);
-            obj.transform.localScale = Vector3.one * scale;
+            obj.transform.localScale =obj.transform.localScale* scale;
         }
     }
 }

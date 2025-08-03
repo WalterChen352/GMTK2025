@@ -166,9 +166,12 @@ MonoBehaviour:
   Health: 0
   TrunkRB: {fileID: 0}
   Push: 50
-  fullTree: {fileID: 0}
   trunk: {fileID: 0}
-  stump: {fileID: 0}
+  minDamage: 1.01
+  maxDamage: 0.01
+  baseEnergyCost: 10
+  timesEaten: 0
+  costFactor: 1.2
 --- !u!114 &-4559166831495402896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +301,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710528064185762437}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13ef4d15b4814b34e878ab391fc72426, type: 3}
   m_Name: 
@@ -310,7 +313,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710528064185762437}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13419f60314e4734682301d98ed01766, type: 3}
   m_Name: 

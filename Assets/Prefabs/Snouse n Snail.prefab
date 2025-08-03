@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4958057128312156776}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.8, y: 3.86, z: -8.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -120,6 +120,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4392322688066122682}
     m_Modifications:
+    - target: {fileID: 1655362608681367660, guid: a137e1add8c705c418ed50200adef977, type: 3}
+      propertyPath: snailState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4313967272808616058, guid: a137e1add8c705c418ed50200adef977, type: 3}
       propertyPath: m_Name
       value: Snail
@@ -164,13 +168,68 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6676065282741019961, guid: a137e1add8c705c418ed50200adef977, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c37560de7a89e424ba0efb0b05a9e936, type: 2}
+    - target: {fileID: 6676065282741019961, guid: a137e1add8c705c418ed50200adef977, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -7343134070022885650, guid: c37560de7a89e424ba0efb0b05a9e936, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4313967272808616058, guid: a137e1add8c705c418ed50200adef977, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1911335677390841594}
   m_SourcePrefab: {fileID: 100100000, guid: a137e1add8c705c418ed50200adef977, type: 3}
 --- !u!4 &1567834826422295751 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5891232311215435538, guid: a137e1add8c705c418ed50200adef977, type: 3}
   m_PrefabInstance: {fileID: 4900987203614651349}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5979313971113823161 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1655362608681367660, guid: a137e1add8c705c418ed50200adef977, type: 3}
+  m_PrefabInstance: {fileID: 4900987203614651349}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213669422202659759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8eaf7161ee8627489d3f8abc0ac7a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &9213669422202659759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4313967272808616058, guid: a137e1add8c705c418ed50200adef977, type: 3}
+  m_PrefabInstance: {fileID: 4900987203614651349}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1911335677390841594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213669422202659759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec920399729eb274188d0131b2c880ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: eea5d90dc305b2e478659970a38355f8, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5979313971113823161}
+        m_TargetAssemblyTypeName: Snail, Assembly-CSharp
+        m_MethodName: GetDay
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
